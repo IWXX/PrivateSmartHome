@@ -1,0 +1,11 @@
+C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\bin\Release\netcoreapp2.0\AnJiaWebServer_V1.deps.json
+C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\bin\Release\netcoreapp2.0\AnJiaWebServer_V1.runtimeconfig.json
+C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\bin\Release\netcoreapp2.0\AnJiaWebServer_V1.runtimeconfig.dev.json
+C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\bin\Release\netcoreapp2.0\AnJiaWebServer_V1.dll
+C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\bin\Release\netcoreapp2.0\AnJiaWebServer_V1.pdb
+C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\obj\Release\netcoreapp2.0\AnJiaWebServer_V1.csproj.CoreCompileInputs.cache
+C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\obj\Release\netcoreapp2.0\AnJiaWebServer_V1.AssemblyInfoInputs.cache
+C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\obj\Release\netcoreapp2.0\AnJiaWebServer_V1.AssemblyInfo.cs
+C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\obj\Release\netcoreapp2.0\AnJiaWebServer_V1.dll
+C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\obj\Release\netcoreapp2.0\AnJiaWebServer_V1.pdb
+C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\obj\Release\netcoreapp2.0\AnJiaWebServer_V1.csprojResolveAssemblyReference.cache

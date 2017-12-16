@@ -1,0 +1,13 @@
+C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=AnJiaWebServer_V1
+--content-root=C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1
+--file=C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\Views\Home\About.cshtml
+--file=C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\Views\Home\Blog.cshtml
+--file=C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\Views\Home\Contact.cshtml
+--file=C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\Views\Home\Index.cshtml
+--file=C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\Views\Shared\Error.cshtml
+--file=C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\Views\Shared\_Layout.cshtml
+--file=C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\Views\_ViewImports.cshtml
+--file=C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\Views\_ViewStart.cshtml

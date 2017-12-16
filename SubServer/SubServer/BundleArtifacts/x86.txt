@@ -1,0 +1,2 @@
+MainPackage=C:\Users\10593\Documents\Visual Studio 2017\Projects\FacialRecognizedDoorClient\FacialRecognizedDoorClient\bin\x86\Release\FacialRecognizedDoorClient_1.1.3.0_x86.appx
+SymbolPackage=C:\Users\10593\Documents\Visual Studio 2017\Projects\FacialRecognizedDoorClient\FacialRecognizedDoorClient\AppPackages\FacialRecognizedDoorClient_1.1.3.0_Test\FacialRecognizedDoorClient_1.1.3.0_x86.appxsym
