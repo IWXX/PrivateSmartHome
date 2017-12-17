@@ -1,5 +1,6 @@
 
-=======
+
+
 API说明
 =======
 
@@ -9,9 +10,10 @@ API说明
 .. toctree::
    :maxdepth:2
 
-   登录 <api-docs/login/index>
-   注册 <api-docs/login/index>
-   子服务器绑定 <api-docs/login/index>
-   用户信息获取 <api-docs/login/index>
-   用户信息更新 <api-docs/login/index>
-   组内用户查询 <api-docs/login/index>
+   登录 <login/index>
+   注册 <regist/index>
+   子服务器绑定 <subserverBinding/index>
+   用户信息获取 <uinfoGet/index>
+   用户信息更新 <uinfoUpdate/index>
+   组内用户查询 <ulistInGroupGet/index>
+   设备控制 <deviceControl/index>
