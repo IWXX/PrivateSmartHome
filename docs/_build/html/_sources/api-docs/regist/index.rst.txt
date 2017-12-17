@@ -2,4 +2,71 @@
 ===========
 注册
 ===========
-放大放大时
+接口描述
+用户新用户注册新账户
+
+请求说明
+HTTP方法：POST
+请求URL： http://www.writebug.site/api/register
+URL参数：
+
+Header
+参数	值
+Content-Type	application/json
+
+Body中放置JSON包，其节点详情如下：
+
+
+
+
+参数	是否必选	类型	说明
+username	是	string	登录用户名。
+注意：目前用户名只支持数字加字母特殊字符会被检测为危险字符，另外，没有长度限制，主要是方便测试日后会加上。
+password	是	string	登录密码，。
+注意：目前密码会过滤危险字符以免嵌入sql语句之后查询出现异常。另外，密码没有强度验证以及长度要求
+email	是	string	用户邮箱，需要正确的格式，服务器会进行正则表达式的匹配
+phonenum	是	String	用户手机号，需要正确的格式，服务器会进行正则表达式匹配。
+sex	是	String	表示用户性别，男性为大写M，女性为大写F。
+
+请求示例：
+{
+    	"username":"yuancong",
+   	 	"password":"123456"
+    	"email":"1059392229@qq.com",
+   	 	"phonenum":"15713660311"
+    	"sex":"M",
+}
+返回说明
+
+返回类型：JSON
+
+返回参数：
+
+返回参数	是否必选	类型	值	说明
+Error_code	是	string	0000	表示注册成功
+Msg	是	string		只是一个详细信息
+
+返回示例：
+{
+    	"error_code":"0000",
+   	 	"msg":"Rigester Successful"
+}
+
+
+
+错误码说明
+
+Error_code	msg	说明
+0001	JSON format error	发送的JSON包格式不符合要求
+0002	Username contains dangerous characters	用户名包含危险字符
+0003	Password contains dangerous characters	密码包含危险字符
+0006	The e-mail address format is incorrect	邮箱格式不正确
+0007	The phone number format is incorrect	手机号码格式不正确
+0008	Username has been registered	用户名已存在
+
+返回示例：
+
+{
+    	"Error_code":"0008",
+   	 	"msg":"Username has been registered"
+}

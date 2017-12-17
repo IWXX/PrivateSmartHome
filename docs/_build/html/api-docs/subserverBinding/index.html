@@ -35,7 +35,10 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="PrivateSmartHome  documentation" href="../../index.html"/> 
+    <link rel="top" title="PrivateSmartHome  documentation" href="../../index.html"/>
+        <link rel="up" title="API说明" href="../index.html"/>
+        <link rel="next" title="用户信息获取" href="../uinfoGet/index.html"/>
+        <link rel="prev" title="注册" href="../regist/index.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -84,9 +87,18 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">开始</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">API说明</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API说明</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../login/index.html">登录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../regist/index.html">注册</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">子服务器绑定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uinfoGet/index.html">用户信息获取</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uinfoUpdate/index.html">用户信息更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ulistInGroupGet/index.html">组内用户查询</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deviceControl/index.html">设备控制</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -131,6 +143,8 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
+          <li><a href="../index.html">API说明</a> &raquo;</li>
+        
       <li>子服务器绑定</li>
     
     
@@ -152,6 +166,51 @@
             
   <div class="section" id="id1">
 <h1>子服务器绑定<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>接口描述
+用于将子服务器ID与一个账户绑定，使该账户对子服务器拥有权限并建立所属关系
+请求说明</p>
+<p>HTTP方法：POST
+请求URL： <a class="reference external" href="http://www.writebug.site/api/SubServerBind">http://www.writebug.site/api/SubServerBind</a>
+URL参数：</p>
+<p>Header
+参数      值
+Content-Type    application/json</p>
+<p>Body中放置JSON包，其节点详情如下：</p>
+<p>参数      是否必选    类型      说明
+actoken 是       string  用户认证的唯一标识，每一次登录即获得一次
+SubserverId     是       Sting   子服务器的唯一标识，与</p>
+<p>请求示例：
+{</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>“actoken”:” b98774f1-3406-400f-8e51-407abe4d79f0”,</dt>
+<dd>“subserverId”:”b98774f1-3406-400f-8e51-407abe4d79f0”</dd>
+</dl>
+</div></blockquote>
+<p>}</p>
+<p>返回说明
+返回类型：JSON</p>
+<p>返回参数：</p>
+<p>返回参数    类型      是否必须    值       说明
+error_code      string  是       1000    设备绑定成功
+Msg     sting   是       SubServer binding
+success 详细信息</p>
+<p>返回示例：
+{</p>
+<blockquote>
+<div>“error_code”:”1000”,
+“msg”:” SubServer binding success”</div></blockquote>
+<p>}</p>
+<p>错误码说明</p>
+<p>Error_code      msg     说明
+2001    JSON format error       发送的JSON包格式不符合要求</p>
+<blockquote>
+<div>Invalid access_Token
+This Subserver is owned by user
+SubServer binding failed
+MAC is not available
+MAC contains dangerous characters
+Token contains dangerous characters</div></blockquote>
 </div>
 
 
@@ -161,6 +220,15 @@
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../uinfoGet/index.html" class="btn btn-neutral float-right" title="用户信息获取" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../regist/index.html" class="btn btn-neutral" title="注册" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

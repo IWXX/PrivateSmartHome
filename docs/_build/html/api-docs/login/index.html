@@ -37,6 +37,7 @@
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="PrivateSmartHome  documentation" href="../../index.html"/>
         <link rel="up" title="API说明" href="../index.html"/>
+        <link rel="next" title="注册" href="../regist/index.html"/>
         <link rel="prev" title="API说明" href="../index.html"/> 
 
   
@@ -90,6 +91,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">开始</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">API说明</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">登录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../regist/index.html">注册</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../subserverBinding/index.html">子服务器绑定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uinfoGet/index.html">用户信息获取</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uinfoUpdate/index.html">用户信息更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ulistInGroupGet/index.html">组内用户查询</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deviceControl/index.html">设备控制</a></li>
 </ul>
 </li>
 </ul>
@@ -159,6 +166,53 @@
             
   <div class="section" id="id1">
 <h1>登录<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>接口描述
+用于登录系统并获取accesstoken,目前token设定为每登录一次token即更新一次且不过期</p>
+<p>请求说明
+HTTP方法：POST
+请求URL：<a class="reference external" href="http://www.writebug.site/api/login">http://www.writebug.site/api/login</a>
+URL参数：</p>
+<p>Header
+参数      值
+Content-Type    application/json</p>
+<p>Body中放置JSON包，其节点详情如下：</p>
+<p>参数      是否必选    类型      说明
+username        是       string  登录用户名
+password        是       string  登陆密码</p>
+<p>请求示例：
+{</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>“username”:”yuancong”,</dt>
+<dd>“password”:”123456”</dd>
+</dl>
+</div></blockquote>
+<p>}</p>
+<p>返回说明</p>
+<p>返回类型：JSON</p>
+<p>返回参数：</p>
+<p>返回参数            类型      是否必须    说明
+AccessToken             string  是       用户请求其他接口时的唯一身份认证标识</p>
+<p>返回示例：
+{</p>
+<blockquote>
+<div>“AccessToken”:”65266319-4f03-4f99-a194-5d1a29a34cfd”</div></blockquote>
+<p>}</p>
+<p>错误码说明
+Error_code      msg     说明
+0001    JSON format error       发送的JSON包格式不符合要求
+0002    Username contains dangerous characters  用户名包含危险字符
+0003    Password contains dangerous characters  密码包含危险字符</p>
+<p>返回示例：</p>
+<dl class="docutils">
+<dt>{</dt>
+<dd><dl class="first last docutils">
+<dt>“Error_code”:”0003”,</dt>
+<dd>“msg”:”Password contains dangerous characters”</dd>
+</dl>
+</dd>
+</dl>
+<p>}</p>
 </div>
 
 
@@ -170,6 +224,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../regist/index.html" class="btn btn-neutral float-right" title="注册" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral" title="API说明" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

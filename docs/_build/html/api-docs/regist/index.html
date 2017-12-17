@@ -35,7 +35,10 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="PrivateSmartHome  documentation" href="../../index.html"/> 
+    <link rel="top" title="PrivateSmartHome  documentation" href="../../index.html"/>
+        <link rel="up" title="API说明" href="../index.html"/>
+        <link rel="next" title="子服务器绑定" href="../subserverBinding/index.html"/>
+        <link rel="prev" title="登录" href="../login/index.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -84,9 +87,18 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">开始</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">API说明</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API说明</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../login/index.html">登录</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">注册</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../subserverBinding/index.html">子服务器绑定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uinfoGet/index.html">用户信息获取</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uinfoUpdate/index.html">用户信息更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ulistInGroupGet/index.html">组内用户查询</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deviceControl/index.html">设备控制</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -131,6 +143,8 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
+          <li><a href="../index.html">API说明</a> &raquo;</li>
+        
       <li>注册</li>
     
     
@@ -152,7 +166,69 @@
             
   <div class="section" id="id1">
 <h1>注册<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>放大放大时</p>
+<p>接口描述
+用户新用户注册新账户</p>
+<p>请求说明
+HTTP方法：POST
+请求URL： <a class="reference external" href="http://www.writebug.site/api/register">http://www.writebug.site/api/register</a>
+URL参数：</p>
+<p>Header
+参数      值
+Content-Type    application/json</p>
+<p>Body中放置JSON包，其节点详情如下：</p>
+<p>参数      是否必选    类型      说明
+username        是       string  登录用户名。
+注意：目前用户名只支持数字加字母特殊字符会被检测为危险字符，另外，没有长度限制，主要是方便测试日后会加上。
+password        是       string  登录密码，。
+注意：目前密码会过滤危险字符以免嵌入sql语句之后查询出现异常。另外，密码没有强度验证以及长度要求
+email   是       string  用户邮箱，需要正确的格式，服务器会进行正则表达式的匹配
+phonenum        是       String  用户手机号，需要正确的格式，服务器会进行正则表达式匹配。
+sex     是       String  表示用户性别，男性为大写M，女性为大写F。</p>
+<p>请求示例：
+{</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>“username”:”yuancong”,</dt>
+<dd>“password”:”123456”</dd>
+<dt>“email”:”<a class="reference external" href="mailto:1059392229&#37;&#52;&#48;qq&#46;com">1059392229<span>&#64;</span>qq<span>&#46;</span>com</a>”,</dt>
+<dd>“phonenum”:”15713660311”</dd>
+</dl>
+<p>“sex”:”M”,</p>
+</div></blockquote>
+<p>}
+返回说明</p>
+<p>返回类型：JSON</p>
+<p>返回参数：</p>
+<p>返回参数    是否必选    类型      值       说明
+Error_code      是       string  0000    表示注册成功
+Msg     是       string          只是一个详细信息</p>
+<p>返回示例：
+{</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>“error_code”:”0000”,</dt>
+<dd>“msg”:”Rigester Successful”</dd>
+</dl>
+</div></blockquote>
+<p>}</p>
+<p>错误码说明</p>
+<p>Error_code      msg     说明
+0001    JSON format error       发送的JSON包格式不符合要求
+0002    Username contains dangerous characters  用户名包含危险字符
+0003    Password contains dangerous characters  密码包含危险字符
+0006    The e-mail address format is incorrect  邮箱格式不正确
+0007    The phone number format is incorrect    手机号码格式不正确
+0008    Username has been registered    用户名已存在</p>
+<p>返回示例：</p>
+<dl class="docutils">
+<dt>{</dt>
+<dd><dl class="first last docutils">
+<dt>“Error_code”:”0008”,</dt>
+<dd>“msg”:”Username has been registered”</dd>
+</dl>
+</dd>
+</dl>
+<p>}</p>
 </div>
 
 
@@ -162,6 +238,15 @@
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../subserverBinding/index.html" class="btn btn-neutral float-right" title="子服务器绑定" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../login/index.html" class="btn btn-neutral" title="登录" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
