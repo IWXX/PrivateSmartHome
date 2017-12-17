@@ -1,9 +1,16 @@
+=================================
+PrivateSmartHome（私有智能家居系统）文档
+=================================
+
+文档主要是描述该系统的部署方式，运行原理，以及如何对它进一步开发的问题。
+
 
 
 .. toctree::
-   :hidden:
+   :maxdepth:3
 
-   Get Started <get-started/index> 
-   API Reference <api-docs/index>
+   开始 <get-started/index> 
+   API说明 <api-docs/index>
 
-* :ref:`genindex`
+
+
