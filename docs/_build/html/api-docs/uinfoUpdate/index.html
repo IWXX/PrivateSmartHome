@@ -166,6 +166,41 @@
             
   <div class="section" id="id1">
 <h1>用户信息更新<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>接口描述
+用于对用户个人基本信息的更新修改</p>
+<p>请求说明</p>
+<p>HTTP方法：POST
+请求URL： <a class="reference external" href="http://www.writebug.site/api/UpdateUinfo">http://www.writebug.site/api/UpdateUinfo</a>
+URL参数：</p>
+<p>Header:
+参数      值
+Content-Type    application/json</p>
+<p>Body中放置JSON包，其节点详情如下：</p>
+<p>参数      是否必选    类型      说明
+actoken 是       string  用户认证的唯一标识，每一次登录即获得一次</p>
+<p>请求示例：
+{</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>“actoken”:” b98774f1-3406-400f-8e51-407abe4d79f0”,</dt>
+<dd>“subserverId”:”b98774f1-3406-400f-8e51-407abe4d79f0”</dd>
+</dl>
+</div></blockquote>
+<p>}</p>
+<p>返回说明</p>
+<p>返回类型：JSON</p>
+<p>返回参数：</p>
+<p>返回参数    类型      是否必须    值       说明
+error_code      string  是       2000    发送成功</p>
+<p>返回示例：
+{</p>
+<blockquote>
+<div>“error_code”:”2000”,
+“msg”:”ControlMsg send success”</div></blockquote>
+<p>}</p>
+<p>错误码说明</p>
+<p>Error_code      msg     说明
+2001    JSON format error       发送的JSON包格式不符合要求</p>
 </div>
 
 

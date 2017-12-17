@@ -2,3 +2,48 @@
 
 用户信息更新
 =================
+接口描述
+用于对用户个人基本信息的更新修改
+
+请求说明
+
+HTTP方法：POST
+请求URL： http://www.writebug.site/api/UpdateUinfo
+URL参数：
+
+Header:
+参数	值
+Content-Type	application/json
+
+Body中放置JSON包，其节点详情如下：
+
+参数	是否必选	类型	说明
+actoken	是	string	用户认证的唯一标识，每一次登录即获得一次
+
+请求示例：
+{
+    	"actoken":" b98774f1-3406-400f-8e51-407abe4d79f0",
+   	 	"subserverId":"b98774f1-3406-400f-8e51-407abe4d79f0"
+}
+
+返回说明
+
+返回类型：JSON
+
+返回参数：
+
+返回参数	类型	是否必须	值	说明
+error_code	string	是	2000	发送成功
+
+返回示例：
+{
+    	"error_code":"2000",
+    	"msg":"ControlMsg send success"
+}
+
+
+错误码说明
+
+Error_code	msg	说明
+2001	JSON format error	发送的JSON包格式不符合要求
+
