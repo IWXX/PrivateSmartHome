@@ -13,7 +13,7 @@ PrivateSmartHome（私有智能家居系统）文档
    开始 <get-started/index> 
    API说明 <api-docs/index>
    关于 <about-us/index>
-   FAQ <f-a-q/index>
+   FAQ  <f-a-q/index>
 
 
 
