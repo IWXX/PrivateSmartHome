@@ -13,6 +13,7 @@
 
 **HTTP方法：** POST
 **请求URL:**  http://www.writebug.site/api/SubServerBind
+
 **URL参数：**
 
 *Header*
