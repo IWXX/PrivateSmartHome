@@ -20,6 +20,23 @@ PrivateSmartHome是一个简易版的物联网家居系统。你可以自己DIY�
 要部署PrivateSmartHome你需要：
 
 * 一台装有UbuntuServer的云服务器
-* 一台装有Windows10 IOT Core 的树莓派(Rasperbery Pi)
+* 一台装有Windows10 IOT Core 的树莓派(Rasperbery Pi 3)
+
+.. note:: 服务器上需要安装 .net core ，否则就不能部署服务器
+
+
+
+云服务器准备
+===========
+
+
+
+
+树莓派准备
+==========
+
+
+
+
 
 
