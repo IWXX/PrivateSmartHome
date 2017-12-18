@@ -13379,11 +13379,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\PrivateSmartHome\\AnJiaWebServer\\AnJiaWebServer_V1\\AnJiaWebServer_V1.csproj",
+      "projectUniqueName": "D:\\PrivateSmartHome\\RomoteServer\\AnJiaWebServer_V1\\AnJiaWebServer_V1.csproj",
       "projectName": "AnJiaWebServer_V1",
-      "projectPath": "D:\\PrivateSmartHome\\AnJiaWebServer\\AnJiaWebServer_V1\\AnJiaWebServer_V1.csproj",
+      "projectPath": "D:\\PrivateSmartHome\\RomoteServer\\AnJiaWebServer_V1\\AnJiaWebServer_V1.csproj",
       "packagesPath": "C:\\Users\\10593\\.nuget\\packages\\",
-      "outputPath": "D:\\PrivateSmartHome\\AnJiaWebServer\\AnJiaWebServer_V1\\obj\\",
+      "outputPath": "D:\\PrivateSmartHome\\RomoteServer\\AnJiaWebServer_V1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
