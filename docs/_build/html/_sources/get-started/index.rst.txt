@@ -21,6 +21,7 @@ PrivateSmartHome是一个简易版的物联网家居系统。你可以自己DIY�
 
 * 一台装有UbuntuServer的云服务器
 * 一台装有Windows10 IOT Core 的树莓派(Rasperbery Pi 3)
+* 手机APP
 * 有线音箱（可选）
 * USB摄像头（可选）
 
@@ -53,6 +54,14 @@ PrivateSmartHome是一个简易版的物联网家居系统。你可以自己DIY�
 
 树莓派准备
 ==========
+
+树莓派的系统使用了Windows10 IOT core 。这是一个很年轻的IOT系统，我觉得它未来还是很有希望的。
+
+1. 安装Windows10 IOT core 
+2. 安装子服务器程序
+3. 连线
+
+.. image:: ../_static/RaspberryPiConnectionDiagram.png
 
 
 
