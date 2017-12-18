@@ -175,14 +175,28 @@
 <ul class="simple">
 <li>一台装有UbuntuServer的云服务器</li>
 <li>一台装有Windows10 IOT Core 的树莓派(Rasperbery Pi 3)</li>
+<li>有线音箱（可选）</li>
+<li>USB摄像头（可选）</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">服务器上需要安装 .net core ，否则就不能部署服务器</p>
+<p class="last">服务器上需要安装 .net core ，否则就不能部署服务器。音箱用来播放语音提示，USB摄像头可以进行人脸识别</p>
 </div>
 </div>
 <div class="section" id="id4">
 <h2>云服务器准备<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>云服务程序是一个ASP.NET core MVC 项目，不能直接运行所以需要为之搭建运行环境。现假设服务器操作系统为Ubuntu Server
+,以下为部署流程：</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="https://www.microsoft.com/net/learn/get-started/linuxubuntu">安装 .net core 2.0</a></li>
+<li><a class="reference external" href="http://blog.csdn.net/u014374031/article/details/73441577">安装反向代理服务器 nginx</a></li>
+<li><a class="reference external" href="http://blog.csdn.net/jackghq/article/details/62937208?utm_source=itdadao&amp;utm_medium=referral">安装守护进程 supervisor</a></li>
+<li>将生成的程序包发送到云服务器</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">这是.net core 官方推荐使用反向代理服务器。在这里Nginx需要同时支持HTTP以及WebSocket且与服务程序部署在一台云服务器。具体配置见博客</p>
+</div>
 </div>
 <div class="section" id="id5">
 <h2>树莓派准备<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
