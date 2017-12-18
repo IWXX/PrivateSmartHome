@@ -37,11 +37,16 @@ PrivateSmartHome是一个简易版的物联网家居系统。你可以自己DIY�
 
 1.  `安装 .net core 2.0 <https://www.microsoft.com/net/learn/get-started/linuxubuntu>`_ 
 2. `安装反向代理服务器 nginx <http://blog.csdn.net/u014374031/article/details/73441577>`_
-3. `安装守护进程 supervisor <http://blog.csdn.net/jackghq/article/details/62937208?utm_source=itdadao&utm_medium=referral>`_
-4. 将生成的程序包发送到云服务器
 
 .. note:: 这是.net core 官方推荐使用反向代理服务器。在这里Nginx需要同时支持HTTP以及WebSocket且与服务程序部署在一台云服务器。具体配置见博客
  
+3. `安装守护进程 supervisor <http://blog.csdn.net/jackghq/article/details/62937208?utm_source=itdadao&utm_medium=referral>`_
+
+.. note:: supervisor 是用来保证在 shell退出后 服务程序不会停止运行
+
+4. 将生成的程序包发送到云服务器
+
+
 
 
 
