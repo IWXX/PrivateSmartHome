@@ -89,12 +89,18 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../get-started/index.html">开始</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API说明</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../device-sample/index.html">示例</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../login/index.html">登录</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../regist/index.html">注册</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../subserverBinding/index.html">子服务器绑定</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../uinfoGet/index.html">用户信息获取</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">用户信息更新</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">用户信息更新</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">接口描述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">请求说明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">返回说明</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../ulistInGroupGet/index.html">组内用户查询</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../deviceControl/index.html">设备控制</a></li>
 </ul>
@@ -168,41 +174,110 @@
             
   <div class="section" id="id1">
 <h1>用户信息更新<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>接口描述
-用于对用户个人基本信息的更新修改</p>
-<p>请求说明</p>
-<p>HTTP方法：POST
-请求URL： <a class="reference external" href="http://www.writebug.site/api/UpdateUinfo">http://www.writebug.site/api/UpdateUinfo</a>
-URL参数：</p>
-<p>Header:
-参数      值
-Content-Type    application/json</p>
-<p>Body中放置JSON包，其节点详情如下：</p>
-<p>参数      是否必选    类型      说明
-actoken 是       string  用户认证的唯一标识，每一次登录即获得一次</p>
-<p>请求示例：
-{</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>“actoken”:” b98774f1-3406-400f-8e51-407abe4d79f0”,</dt>
-<dd>“subserverId”:”b98774f1-3406-400f-8e51-407abe4d79f0”</dd>
-</dl>
-</div></blockquote>
-<p>}</p>
-<p>返回说明</p>
-<p>返回类型：JSON</p>
-<p>返回参数：</p>
-<p>返回参数    类型      是否必须    值       说明
-error_code      string  是       2000    发送成功</p>
-<p>返回示例：
-{</p>
-<blockquote>
-<div>“error_code”:”2000”,
-“msg”:”ControlMsg send success”</div></blockquote>
-<p>}</p>
+<div class="section" id="id2">
+<h2>接口描述<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>用于对用户个人基本信息的更新修改</p>
+</div>
+<div class="section" id="id3">
+<h2>请求说明<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p><strong>HTTP方法：</strong> POST</p>
+<p><strong>请求URL:</strong>  <a class="reference external" href="http://www.writebug.site/api/UpdateUinfo">http://www.writebug.site/api/UpdateUinfo</a></p>
+<p><strong>URL参数：</strong></p>
+<p><em>Header</em></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">值</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Content-Type</td>
+<td>application/json</td>
+</tr>
+</tbody>
+</table>
+<p><em>Body</em></p>
+<p>放置JSON包，其节点详情如下：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="14%" />
+<col width="12%" />
+<col width="61%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">是否必选</th>
+<th class="head">类型</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>actoken</td>
+<td>是</td>
+<td>string</td>
+<td>用户认证的唯一标识，每一次登录即获得一次</td>
+</tr>
+</tbody>
+</table>
+<p><strong>请求示例：</strong></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+                <span class="nt">&quot;actoken&quot;</span><span class="p">:</span><span class="s2">&quot; b98774f1-3406-400f-8e51-407abe4d79f0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;subserverId&quot;</span><span class="p">:</span><span class="s2">&quot;b98774f1-3406-400f-8e51-407abe4d79f0&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>返回说明<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p><strong>返回类型：</strong> JSON</p>
+<p><strong>返回参数：</strong>：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="14%" />
+<col width="9%" />
+<col width="39%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">返回参数</th>
+<th class="head">是否必选</th>
+<th class="head">类型</th>
+<th class="head">值</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>error_code</td>
+<td>string</td>
+<td>是</td>
+<td>1000</td>
+<td>设备绑定成功</td>
+</tr>
+<tr class="row-odd"><td>Msg</td>
+<td>sting</td>
+<td>是</td>
+<td>SubServer binding success</td>
+<td>详细信息</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例：</strong></p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+                <span class="nt">&quot;error_code&quot;</span><span class="p">:</span><span class="s2">&quot;1000&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;msg&quot;</span><span class="p">:</span><span class="s2">&quot; SubServer binding success&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p>错误码说明</p>
 <p>Error_code      msg     说明
 2001    JSON format error       发送的JSON包格式不符合要求</p>
+</div>
 </div>
 
 
