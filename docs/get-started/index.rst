@@ -63,6 +63,19 @@ PrivateSmartHome是一个简易版的物联网家居系统。你可以自己DIY�
 
 .. image:: ../_static/RaspberryPiConnectionDiagram.png
 
+引脚说明
+========
+
+1. **GPIO 5:** 连接门铃按钮
+
+2. **GPIO 6:**  连接电磁锁
+
+3. **GPIO 12：** 网络状态指示灯
+
+4. **GPIO 13：** 蓝牙状态指示灯
+
+5. **GPIO 26：** 连接蓝牙配对按钮
+
 
 
 
