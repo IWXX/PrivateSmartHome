@@ -11,6 +11,7 @@ PrivateSmartHome（私有智能家居系统）文档
    :maxdepth:2
 
    开始 <get-started/index> 
+   设备示例 <device-sample/index>
    API说明 <api-docs/index>
    关于 <about-us/index>
    FAQ  <f-a-q/index>
