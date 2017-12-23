@@ -32,8 +32,8 @@
         <StackPanel Grid.Column="1" Margin="10,40,10,10" Grid.RowSpan="2">
             <CaptureElement x:Name="WebcamFeed" Margin="91,0,110,0" Width="300" Loaded="WebcamFeed_Loaded"/>
         </StackPanel>
-        <TextBlock x:Name="blutoothBox" Grid.Column="2" HorizontalAlignment="Left" Margin="10,121,0,0" Grid.Row="2" TextWrapping="Wrap" Text="蓝牙状态：" VerticalAlignment="Top"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,227,0,0" Grid.Row="2" TextWrapping="Wrap" Text="云服务器：" VerticalAlignment="Top" RenderTransformOrigin="0.5,-1"/>
+        <TextBlock x:Name="blutoothBox" Grid.Column="2" HorizontalAlignment="Left" Margin="10,121,0,0" Grid.Row="2" TextWrapping="Wrap" Text="蓝牙状态：" VerticalAlignment="Top" Foreground="#FF1287D8" FontWeight="Bold"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="8,220,0,0" Grid.Row="2" TextWrapping="Wrap" Text="云服务器：" VerticalAlignment="Top" RenderTransformOrigin="0.5,-1" Foreground="#FF1287D8" FontWeight="Bold"/>
         <Image x:Name="TeamLogo" VerticalAlignment="Center" Source="Image/Logo.png" Stretch="Fill" Margin="87,60,87,30" HorizontalAlignment="Center" Width="100"/>
         <TextBlock x:Name="ComeInBlock" HorizontalAlignment="Left" Margin="0,107,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="24" TextAlignment="Center" Width="261" FontWeight="Bold"/>
         <TextBlock x:Name="DetailsBlock" HorizontalAlignment="Left" Margin="0,185,0,0" Grid.Row="2" TextWrapping="WrapWholeWords" Text="就绪" VerticalAlignment="Top" FontSize="24" TextAlignment="Center" Width="261" FontWeight="Bold" Loaded="OnConnectAsync"/>
@@ -47,14 +47,14 @@
             <TextBlock TextWrapping="Wrap" Text="正在识别请稍等······" TextAlignment="Center"/>
         </StackPanel>
         <Border BorderBrush="#FF0080FF" BorderThickness="1,0" Grid.Column="1" HorizontalAlignment="Left" Height="750" Margin="0,10,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="526" Grid.ColumnSpan="2"/>
-        <TextBlock x:Name="WebcamStatus" Grid.Column="2" HorizontalAlignment="Left" Margin="163,227,0,0" Grid.Row="2" TextWrapping="Wrap" Text="正常" VerticalAlignment="Top" RenderTransformOrigin="0.5,-1"/>
+        <TextBlock x:Name="WebcamStatus" Grid.Column="2" HorizontalAlignment="Left" Margin="156,224,0,0" Grid.Row="2" TextWrapping="Wrap" Text="正常" VerticalAlignment="Top" RenderTransformOrigin="0.5,-1"/>
         <TextBlock x:Name="BlutoothStatus" Grid.Column="2" HorizontalAlignment="Left" Margin="163,121,0,0" Grid.Row="2" TextWrapping="Wrap" Text="未连接" VerticalAlignment="Top" RenderTransformOrigin="0.5,-1"/>
-        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,146,0,0" Grid.Row="2" TextWrapping="Wrap" Text="WIFI状态：" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,146,0,0" Grid.Row="2" TextWrapping="Wrap" Text="WIFI状态：" VerticalAlignment="Top" Foreground="#FF1287D8" FontWeight="Bold"/>
         <TextBlock x:Name="wifiPasswodBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="156,199,0,0" Grid.Row="2" TextWrapping="Wrap" Text="&lt;unknown&gt;" VerticalAlignment="Top"/>
-        <TextBlock x:Name="LightHelperBox_Copy" Grid.Column="2" HorizontalAlignment="Left" Margin="10,195,0,0" Grid.Row="2" TextWrapping="Wrap" Text="密码" VerticalAlignment="Top"/>
+        <TextBlock x:Name="LightHelperBox_Copy" Grid.Column="2" HorizontalAlignment="Left" Margin="10,195,0,0" Grid.Row="2" TextWrapping="Wrap" Text="密码" VerticalAlignment="Top" Foreground="#FF1287D8" FontWeight="Bold"/>
         <TextBlock x:Name="wifiNameBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="156,171,0,0" Grid.Row="2" TextWrapping="Wrap" Text="&lt;unknown&gt;" VerticalAlignment="Top"/>
-        <TextBlock x:Name="LightHelperBox_Copy2" Grid.Column="2" HorizontalAlignment="Left" Margin="10,171,0,0" Grid.Row="2" TextWrapping="Wrap" Text="SSID:" VerticalAlignment="Top" RenderTransformOrigin="0.828,-1"/>
-        <TextBlock x:Name="WIFIstatusBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="163,150,0,0" Grid.Row="2" TextWrapping="Wrap" Text="未连接" VerticalAlignment="Top" RenderTransformOrigin="0.444,0.2"/>
+        <TextBlock x:Name="LightHelperBox_Copy2" Grid.Column="2" HorizontalAlignment="Left" Margin="10,171,0,0" Grid.Row="2" TextWrapping="Wrap" Text="SSID:" VerticalAlignment="Top" RenderTransformOrigin="0.828,-1" Foreground="#FF1287D8" FontWeight="Bold"/>
+        <TextBlock x:Name="WIFIstatusBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="163,146,0,0" Grid.Row="2" TextWrapping="Wrap" Text="未连接" VerticalAlignment="Top" RenderTransformOrigin="0.444,0.2"/>
         <RadioButton Content="关闭预览" HorizontalAlignment="Left" Margin="10,54,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.Column="2"/>
         <RadioButton x:Name="Start" Content="开启预览" HorizontalAlignment="Left" Margin="10,21,0,0" Grid.Row="2" VerticalAlignment="Top" Height="34" Grid.Column="2"/>
     </Grid>
