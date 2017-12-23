@@ -1107,7 +1107,7 @@ namespace FacialRecognizedDoorClient
             faceLookImagePanel.Visibility = Visibility.Collapsed;
             // 显示进度条
             AnalysingVisitorGrid.Visibility = Visibility.Visible;
-            await speechClient.DingDong();
+        //    await speechClient.DingDong();
             dispatcherTimer = new DispatcherTimer();//生成一个计时器
             
             JObject recognizedVisitors;//识别结果的Json对象
@@ -1656,6 +1656,12 @@ namespace FacialRecognizedDoorClient
         {
             //  await CreatAndReadWiFiInfoFile();
             await WriteToWiFiInfoFile("test1","1234sdfdsf");
+        }
+
+
+        private void Preview_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
     public class RfcommChatDeviceDisplay : INotifyPropertyChanged

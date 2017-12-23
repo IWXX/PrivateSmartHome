@@ -21,7 +21,7 @@ namespace FacialRecognizedDoorClient.Helpers
         {
             mediaElement = media;
             synthesizer = new SpeechSynthesizer();
-            synthesizer.Options.SpeakingRate = 0.8;
+           // synthesizer.Options.SpeakingRate = 0.8;
       
         }
 
