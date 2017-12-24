@@ -75,11 +75,12 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Text" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontWeight" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="Width" />
-      <RootProperty Name="FontWeight" />
       <RootProperty Name="Height" />
       <RootProperty Name="LineHeight" />
       <RootEvent Name="Loaded" />
@@ -110,6 +111,8 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ProgressBar">

@@ -55,7 +55,7 @@
         <TextBlock x:Name="wifiNameBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="156,171,0,0" Grid.Row="2" TextWrapping="Wrap" Text="&lt;unknown&gt;" VerticalAlignment="Top"/>
         <TextBlock x:Name="LightHelperBox_Copy2" Grid.Column="2" HorizontalAlignment="Left" Margin="10,171,0,0" Grid.Row="2" TextWrapping="Wrap" Text="SSID:" VerticalAlignment="Top" RenderTransformOrigin="0.828,-1" Foreground="#FF1287D8" FontWeight="Bold"/>
         <TextBlock x:Name="WIFIstatusBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="163,146,0,0" Grid.Row="2" TextWrapping="Wrap" Text="未连接" VerticalAlignment="Top" RenderTransformOrigin="0.444,0.2"/>
-        <RadioButton Content="关闭预览" HorizontalAlignment="Left" Margin="10,54,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.Column="2"/>
-        <RadioButton x:Name="Start" Content="开启预览" HorizontalAlignment="Left" Margin="10,21,0,0" Grid.Row="2" VerticalAlignment="Top" Height="34" Grid.Column="2"/>
+        <RadioButton Content="关闭预览" HorizontalAlignment="Left" Margin="10,54,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.Column="2" FontWeight="Bold" Foreground="#FF1287D8"/>
+        <RadioButton x:Name="Start" Content="开启预览" HorizontalAlignment="Left" Margin="10,21,0,0" Grid.Row="2" VerticalAlignment="Top" Height="34" Grid.Column="2" FontWeight="Bold" Foreground="#FF1287D8"/>
     </Grid>
 </Page>
