@@ -1,4 +1,7 @@
 
+
+
+
 ====
 开始
 ====
@@ -50,6 +53,8 @@ PrivateSmartHome是一个简易版的物联网家居系统。你可以自己DIY�
 .. note:: 其中数据库的 默认用户名: root 密码：Ub1996314@ 
 
 5. 将生成的程序包发送到云服务器
+
+:doc:`更多<cloudServerConfig>`
 
 
 
