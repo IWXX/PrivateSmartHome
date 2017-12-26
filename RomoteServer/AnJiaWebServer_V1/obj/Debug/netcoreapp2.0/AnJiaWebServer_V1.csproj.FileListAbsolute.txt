@@ -9,3 +9,14 @@ C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\obj\Debug\netcoreap
 C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\obj\Debug\netcoreapp2.0\AnJiaWebServer_V1.AssemblyInfo.cs
 C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\obj\Debug\netcoreapp2.0\AnJiaWebServer_V1.dll
 C:\Users\10593\source\repos\AnJiaWebServer\AnJiaWebServer_V1\obj\Debug\netcoreapp2.0\AnJiaWebServer_V1.pdb
+D:\GithubProject\PrivateSmartHome\RomoteServer\AnJiaWebServer_V1\obj\Debug\netcoreapp2.0\AnJiaWebServer_V1.csprojResolveAssemblyReference.cache
+D:\GithubProject\PrivateSmartHome\RomoteServer\AnJiaWebServer_V1\obj\Debug\netcoreapp2.0\AnJiaWebServer_V1.csproj.CoreCompileInputs.cache
+D:\GithubProject\PrivateSmartHome\RomoteServer\AnJiaWebServer_V1\obj\Debug\netcoreapp2.0\AnJiaWebServer_V1.AssemblyInfoInputs.cache
+D:\GithubProject\PrivateSmartHome\RomoteServer\AnJiaWebServer_V1\obj\Debug\netcoreapp2.0\AnJiaWebServer_V1.AssemblyInfo.cs
+D:\GithubProject\PrivateSmartHome\RomoteServer\AnJiaWebServer_V1\obj\Debug\netcoreapp2.0\AnJiaWebServer_V1.dll
+D:\GithubProject\PrivateSmartHome\RomoteServer\AnJiaWebServer_V1\obj\Debug\netcoreapp2.0\AnJiaWebServer_V1.pdb
+D:\GithubProject\PrivateSmartHome\RomoteServer\AnJiaWebServer_V1\bin\Debug\netcoreapp2.0\AnJiaWebServer_V1.deps.json
+D:\GithubProject\PrivateSmartHome\RomoteServer\AnJiaWebServer_V1\bin\Debug\netcoreapp2.0\AnJiaWebServer_V1.runtimeconfig.json
+D:\GithubProject\PrivateSmartHome\RomoteServer\AnJiaWebServer_V1\bin\Debug\netcoreapp2.0\AnJiaWebServer_V1.runtimeconfig.dev.json
+D:\GithubProject\PrivateSmartHome\RomoteServer\AnJiaWebServer_V1\bin\Debug\netcoreapp2.0\AnJiaWebServer_V1.dll
+D:\GithubProject\PrivateSmartHome\RomoteServer\AnJiaWebServer_V1\bin\Debug\netcoreapp2.0\AnJiaWebServer_V1.pdb
