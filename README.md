@@ -1,4 +1,4 @@
-# PrivateSmartHome  私有智能家居系统
+# [PrivateSmartHome  私有智能家居系统]http://privatesmarthome.readthedocs.io/en/latest/get-started/index.html)
 
 ## 概述
 
