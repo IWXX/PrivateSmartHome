@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-G9PR80J</Machine>
+    <Machine>DESKTOP-TBD8PCG</Machine>
     <WindowsUser>10593</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>5ab86b86-e1f4-4daf-8c61-f31d2686bc14</PackageIdentityName>
     <PackageIdentityPublisher>CN=D646A783-3D45-42D6-A615-E6F5D8A5AEA7</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\GithubProject\PrivateSmartHome\SubServer\SubServer\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\GithubProject\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>31D7D5905607FF017755347AA2A5F344047F33DB74CB48ABBDC853CFCC9C5A6F</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>5546456CEAA95.SmartHomeSubServer_1.1.3.0_x86__4bskhqfqy7bmt</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>5546456CEAA95.SmartHomeSubServer_4bskhqfqy7bmt!App</RegisteredUserModeAppID>
@@ -28,16 +28,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-23T09:19:19.295</Modified>
+      <Modified>2018-02-11T11:27:23.934</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\FacialRecognizedDoorClient.exe">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\FacialRecognizedDoorClient.exe">
       <PackagePath>entrypoint\FacialRecognizedDoorClient.exe</PackagePath>
-      <Modified>2017-12-23T09:19:18.300</Modified>
+      <Modified>2018-02-11T11:27:22.674</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10593\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -519,104 +519,104 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T15:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\bad.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\bad.png">
       <PackagePath>Image\bad.png</PackagePath>
-      <Modified>2017-12-21T06:49:12.711</Modified>
+      <Modified>2018-01-26T11:37:09.646</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\doorbell.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\doorbell.png">
       <PackagePath>Image\doorbell.png</PackagePath>
-      <Modified>2017-12-21T06:49:12.711</Modified>
+      <Modified>2018-01-26T11:37:09.650</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\good.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\good.png">
       <PackagePath>Image\good.png</PackagePath>
-      <Modified>2017-12-21T06:49:12.711</Modified>
+      <Modified>2018-01-26T11:37:09.650</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\Logo.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\Logo.png">
       <PackagePath>Image\Logo.png</PackagePath>
-      <Modified>2017-12-21T06:49:12.711</Modified>
+      <Modified>2018-01-26T11:37:09.645</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\QRCode.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\QRCode.png">
       <PackagePath>Image\QRCode.png</PackagePath>
-      <Modified>2017-12-21T06:49:12.711</Modified>
+      <Modified>2018-01-26T11:37:09.646</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\question.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\question.png">
       <PackagePath>Image\question.png</PackagePath>
-      <Modified>2017-12-21T06:49:12.711</Modified>
+      <Modified>2018-01-26T11:37:09.652</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\warning.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\warning.png">
       <PackagePath>Image\warning.png</PackagePath>
-      <Modified>2017-12-21T06:49:12.711</Modified>
+      <Modified>2018-01-26T11:37:09.653</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2017-12-21T06:49:12.695</Modified>
+      <Modified>2018-01-26T11:37:09.626</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-21T06:49:12.695</Modified>
+      <Modified>2018-01-26T11:37:09.627</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-21T06:49:12.695</Modified>
+      <Modified>2018-01-26T11:37:09.628</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-21T06:49:12.695</Modified>
+      <Modified>2018-01-26T11:37:09.629</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-21T06:49:12.695</Modified>
+      <Modified>2018-01-26T11:37:09.629</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-21T06:49:12.695</Modified>
+      <Modified>2018-01-26T11:37:09.630</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-21T06:49:12.695</Modified>
+      <Modified>2018-01-26T11:37:09.631</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\conormal.gif">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\conormal.gif">
       <PackagePath>Image\conormal.gif</PackagePath>
-      <Modified>2017-12-21T06:49:12.711</Modified>
+      <Modified>2018-01-26T11:37:09.647</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\coquestion.gif">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\coquestion.gif">
       <PackagePath>Image\coquestion.gif</PackagePath>
-      <Modified>2017-12-21T06:49:12.711</Modified>
+      <Modified>2018-01-26T11:37:09.649</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\normal.gif">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\normal.gif">
       <PackagePath>Image\normal.gif</PackagePath>
-      <Modified>2017-12-21T06:49:12.711</Modified>
+      <Modified>2018-01-26T11:37:09.652</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\yes.gif">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\yes.gif">
       <PackagePath>Image\yes.gif</PackagePath>
-      <Modified>2017-12-21T06:49:12.711</Modified>
+      <Modified>2018-01-26T11:37:09.655</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2017-12-21T06:49:12.726</Modified>
+      <Modified>2018-01-26T11:37:09.662</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\FacialRecognizedDoorClient.xr.xml">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\FacialRecognizedDoorClient.xr.xml">
       <PackagePath>FacialRecognizedDoorClient.xr.xml</PackagePath>
-      <Modified>2017-12-23T09:19:18.027</Modified>
+      <Modified>2018-01-26T11:37:10.125</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2017-12-23T02:30:59.147</Modified>
+      <Modified>2018-02-09T09:19:11.233</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-23T09:19:19.031</Modified>
+      <Modified>2018-02-11T11:27:23.584</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\Core\FacialRecognizedDoorClient.exe">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\Core\FacialRecognizedDoorClient.exe">
       <PackagePath>FacialRecognizedDoorClient.exe</PackagePath>
-      <Modified>2017-12-23T09:19:19.261</Modified>
+      <Modified>2018-02-11T11:27:23.924</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

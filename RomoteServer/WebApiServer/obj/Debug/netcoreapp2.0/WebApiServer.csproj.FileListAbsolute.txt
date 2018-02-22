@@ -1,0 +1,11 @@
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\WebApiServer\bin\Debug\netcoreapp2.0\WebApiServer.deps.json
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\WebApiServer\bin\Debug\netcoreapp2.0\WebApiServer.runtimeconfig.json
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\WebApiServer\bin\Debug\netcoreapp2.0\WebApiServer.runtimeconfig.dev.json
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\WebApiServer\bin\Debug\netcoreapp2.0\WebApiServer.dll
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\WebApiServer\bin\Debug\netcoreapp2.0\WebApiServer.pdb
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\WebApiServer\obj\Debug\netcoreapp2.0\WebApiServer.csprojResolveAssemblyReference.cache
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\WebApiServer\obj\Debug\netcoreapp2.0\WebApiServer.csproj.CoreCompileInputs.cache
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\WebApiServer\obj\Debug\netcoreapp2.0\WebApiServer.AssemblyInfoInputs.cache
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\WebApiServer\obj\Debug\netcoreapp2.0\WebApiServer.AssemblyInfo.cs
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\WebApiServer\obj\Debug\netcoreapp2.0\WebApiServer.dll
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\WebApiServer\obj\Debug\netcoreapp2.0\WebApiServer.pdb

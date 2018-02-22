@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-G9PR80J</Machine>
+    <Machine>DESKTOP-TBD8PCG</Machine>
     <WindowsUser>10593</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>5ab86b86-e1f4-4daf-8c61-f31d2686bc14</PackageIdentityName>
     <PackageIdentityPublisher>CN=D646A783-3D45-42D6-A615-E6F5D8A5AEA7</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\GithubProject\PrivateSmartHome\SubServer\SubServer\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\GithubProject\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\FacialRecognizedDoorClient.exe">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\FacialRecognizedDoorClient.exe">
       <PackagePath>entrypoint\FacialRecognizedDoorClient.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\10593\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
@@ -388,80 +388,80 @@
     <AppxPackagedFile Include="C:\Users\10593\.nuget\packages\system.xml.xmlserializer\4.0.11\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\bad.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\bad.png">
       <PackagePath>Image\bad.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\doorbell.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\doorbell.png">
       <PackagePath>Image\doorbell.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\good.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\good.png">
       <PackagePath>Image\good.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\Logo.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\Logo.png">
       <PackagePath>Image\Logo.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\QRCode.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\QRCode.png">
       <PackagePath>Image\QRCode.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\question.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\question.png">
       <PackagePath>Image\question.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\warning.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\warning.png">
       <PackagePath>Image\warning.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\conormal.gif">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\conormal.gif">
       <PackagePath>Image\conormal.gif</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\coquestion.gif">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\coquestion.gif">
       <PackagePath>Image\coquestion.gif</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\normal.gif">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\normal.gif">
       <PackagePath>Image\normal.gif</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Image\yes.gif">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Image\yes.gif">
       <PackagePath>Image\yes.gif</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\FacialRecognizedDoorClient.xr.xml">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\FacialRecognizedDoorClient.xr.xml">
       <PackagePath>FacialRecognizedDoorClient.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\GithubProject\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\Core\FacialRecognizedDoorClient.exe">
+    <AppxPackagedFile Include="C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\bin\x86\Debug\Core\FacialRecognizedDoorClient.exe">
       <PackagePath>FacialRecognizedDoorClient.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

@@ -1430,7 +1430,7 @@ namespace FacialRecognizedDoorClient
                     await SendAsync(GeneralConstants.websocketToken, GeneralConstants.subServerID);
                     return;
                 }
-                catch (Exception ex) // For debugging
+                catch (Exception) // For debugging
                 {
                     WebcamStatus.Text = "连接服务器失败，请检查网络";
                     messageWebSocket.Dispose();
