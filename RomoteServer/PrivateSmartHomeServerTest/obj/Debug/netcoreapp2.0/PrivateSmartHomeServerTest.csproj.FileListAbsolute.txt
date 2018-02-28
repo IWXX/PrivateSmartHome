@@ -1,0 +1,14 @@
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\PrivateSmartHomeServerTest\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\PrivateSmartHomeServerTest\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\PrivateSmartHomeServerTest\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\PrivateSmartHomeServerTest\bin\Debug\netcoreapp2.0\PrivateSmartHomeServerTest.deps.json
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\PrivateSmartHomeServerTest\bin\Debug\netcoreapp2.0\PrivateSmartHomeServerTest.runtimeconfig.json
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\PrivateSmartHomeServerTest\bin\Debug\netcoreapp2.0\PrivateSmartHomeServerTest.runtimeconfig.dev.json
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\PrivateSmartHomeServerTest\bin\Debug\netcoreapp2.0\PrivateSmartHomeServerTest.dll
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\PrivateSmartHomeServerTest\bin\Debug\netcoreapp2.0\PrivateSmartHomeServerTest.pdb
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\PrivateSmartHomeServerTest\obj\Debug\netcoreapp2.0\PrivateSmartHomeServerTest.csprojResolveAssemblyReference.cache
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\PrivateSmartHomeServerTest\obj\Debug\netcoreapp2.0\PrivateSmartHomeServerTest.csproj.CoreCompileInputs.cache
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\PrivateSmartHomeServerTest\obj\Debug\netcoreapp2.0\PrivateSmartHomeServerTest.AssemblyInfoInputs.cache
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\PrivateSmartHomeServerTest\obj\Debug\netcoreapp2.0\PrivateSmartHomeServerTest.AssemblyInfo.cs
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\PrivateSmartHomeServerTest\obj\Debug\netcoreapp2.0\PrivateSmartHomeServerTest.dll
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\RomoteServer\PrivateSmartHomeServerTest\obj\Debug\netcoreapp2.0\PrivateSmartHomeServerTest.pdb

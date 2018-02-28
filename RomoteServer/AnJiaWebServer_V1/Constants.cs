@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace AnJiaWebServer_V1
+{
+    public static class Constants
+    {
+        public const string SecretKey= "4IZy0vYvvKofcx1Kn5UUByRqoZR5Q4dVWNbHd82tOxhTPaMd770sr9BzF7dgPWPO2kvFhO5fXCea6gedc2LrEg==";
+        public const string Audience = "PrivateSmartHome";
+        public const string Issuer = "AnJia";
+
+        public const string RedisCon = "127.0.0.1:6379";
+
+    }
+}

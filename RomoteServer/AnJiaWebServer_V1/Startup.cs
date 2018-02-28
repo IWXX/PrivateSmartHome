@@ -20,6 +20,16 @@ using System.Data.Common;
 using AnJiaWebServer_V1.JSON;
 using System.Text.RegularExpressions;
 using MySql.Data.MySqlClient;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using AnJiaWebServer_V1.Options;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication;
+using IdentityModel;
+using Microsoft.AspNetCore.SpaServices.Webpack;
+using AnJiaWebServer_V1.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace AnJiaWebServer_V1
 {
@@ -28,10 +38,10 @@ namespace AnJiaWebServer_V1
 
 
         bool macAvailable=false;
-
   
-        JObject result;
 
+        JObject result;
+   
 
         public Startup(IConfiguration configuration)
         {
@@ -41,14 +51,57 @@ namespace AnJiaWebServer_V1
 
         public IConfiguration Configuration { get; }
 
+
+        
         // This method gets called by the runtime. Use this method to add services to the container.
         //运行时调用此方法，使用这个方法添加服务
         //上下文注册依赖关系注入
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.AddDbContext<AnJiaContext>(options =>
                 options.UseMySql (Configuration.GetConnectionString("DefaultConnection")));// options.UserMySQL 指明了要使用MYSQL数据库 
-            services.AddMvc();            
+   
+            services.AddAuthentication( x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(o =>
+            {
+
+                o.IncludeErrorDetails = true;
+                o.Audience = Constants.Audience;
+                o.RequireHttpsMetadata = false;
+
+                o.TokenValidationParameters = new TokenValidationParameters
+                {
+                    NameClaimType ="yuancong",
+                    
+                    RoleClaimType = JwtClaimTypes.Role,                 
+                    ValidIssuer=Constants.Issuer,
+                    IssuerSigningKey = new SymmetricSecurityKey(Convert.FromBase64String(Constants.SecretKey))//这个Key是后台用来计算Signature 的
+
+
+                    /***********************************TokenValidationParameters的参数默认值***********************************/
+                    // RequireSignedTokens = true,
+                    // SaveSigninToken = false,
+                    // ValidateActor = false,
+                    // 将下面两个参数设置为false，可以不验证Issuer和Audience，但是不建议这样做。
+                    // ValidateAudience = true,
+                    // ValidateIssuer = true, 
+                    // ValidateIssuerSigningKey = false,
+                    // 是否要求Token的Claims中必须包含Expires
+                    // RequireExpirationTime = true,
+                    // 允许的服务器时间偏移量
+                    // ClockSkew = TimeSpan.FromSeconds(300),
+                    // 是否验证Token有效期，使用当前时间与Token的Claims中的NotBefore和Expires对比              
+                };
+            });
+
+
+            services.AddMvc();
+
         }
 
 
@@ -57,12 +110,14 @@ namespace AnJiaWebServer_V1
         {
             loggerFactory.AddConsole(LogLevel.Debug);
             loggerFactory.AddDebug(LogLevel.Debug);
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseBrowserLink();
-            }
 
+            }
+            app.UseAuthentication();
             app.UseWebSockets();
 
 #if UseOptions
@@ -75,9 +130,11 @@ namespace AnJiaWebServer_V1
             app.UseWebSockets(webSocketOptions);
             #endregion
 #endif
+            
             #region AcceptWebSocket
             app.Use(async (context, next) =>
             {
+
                 if (context.Request.Path == "/subserver/ws")//这里可以定义路径的格式
                 {
     
@@ -178,6 +235,8 @@ namespace AnJiaWebServer_V1
             app.UseFileServer();
   
             app.UseStaticFiles();
+
+
 
             app.UseMvc(routes =>
             {

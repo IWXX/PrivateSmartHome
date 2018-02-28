@@ -1,0 +1,14 @@
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\bin\Debug\net45\Microsoft.IdentityModel.Tokens.dll
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\bin\Debug\net45\Microsoft.IdentityModel.Tokens.pdb
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\bin\Debug\net45\Microsoft.IdentityModel.Tokens.xml
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\bin\Debug\net45\Newtonsoft.Json.dll
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\bin\Debug\net45\Microsoft.IdentityModel.Logging.dll
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\bin\Debug\net45\Microsoft.IdentityModel.Logging.pdb
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\bin\Debug\net45\Microsoft.IdentityModel.Logging.xml
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\obj\Debug\net45\Microsoft.IdentityModel.Tokens.csprojResolveAssemblyReference.cache
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\obj\Debug\net45\Microsoft.IdentityModel.Tokens.csproj.CoreCompileInputs.cache
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\obj\Debug\net45\Microsoft.IdentityModel.Tokens.AssemblyInfoInputs.cache
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\obj\Debug\net45\Microsoft.IdentityModel.Tokens.AssemblyInfo.cs
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\obj\Debug\net45\Microsoft.IdentityModel.Tokens.dll
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\obj\Debug\net45\Microsoft.IdentityModel.Tokens.xml
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\obj\Debug\net45\Microsoft.IdentityModel.Tokens.pdb

@@ -8,14 +8,31 @@
     <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
+    <Compile Remove="Filters\**" />
+    <Compile Remove="Models\AccountViewModels\**" />
+    <Content Remove="Filters\**" />
+    <Content Remove="Models\AccountViewModels\**" />
+    <EmbeddedResource Remove="Filters\**" />
+    <EmbeddedResource Remove="Models\AccountViewModels\**" />
+    <None Remove="Filters\**" />
+    <None Remove="Models\AccountViewModels\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="IdentityModel" Version="3.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="2.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.0.0.1" />
+    <PackageReference Include="StackExchange.Redis.StrongName" Version="1.2.6" />
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\UserImage\Useravatar\defaulticon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\OtherProjectAPI\" />
   </ItemGroup>
 </Project>

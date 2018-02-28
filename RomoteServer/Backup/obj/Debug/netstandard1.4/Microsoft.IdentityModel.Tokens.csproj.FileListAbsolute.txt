@@ -1,0 +1,4 @@
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\obj\Debug\netstandard1.4\Microsoft.IdentityModel.Tokens.csprojResolveAssemblyReference.cache
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\obj\Debug\netstandard1.4\Microsoft.IdentityModel.Tokens.csproj.CoreCompileInputs.cache
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\obj\Debug\netstandard1.4\Microsoft.IdentityModel.Tokens.AssemblyInfoInputs.cache
+C:\Users\10593\Documents\GitHub\azure-activedirectory-identitymodel-extensions-for-dotnet\src\Microsoft.IdentityModel.Tokens\obj\Debug\netstandard1.4\Microsoft.IdentityModel.Tokens.AssemblyInfo.cs
