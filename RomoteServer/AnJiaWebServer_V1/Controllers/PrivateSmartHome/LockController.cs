@@ -12,10 +12,13 @@ using System.Data.Common;
 using Microsoft.EntityFrameworkCore;
 using AnJiaWebServer_V1;
 
+
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace AnJiaWebServer_V1.Controllers
 {
+   
+    
     [Route("PrivateSmartHome/V1/[controller]")]
     public class LockController : Controller
     {
@@ -35,8 +38,10 @@ namespace AnJiaWebServer_V1.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public string Get(string username)//获取设备列表
         {
+            //根据设备ID查询数据库
+
             return "value";
         }
 
@@ -296,8 +301,6 @@ namespace AnJiaWebServer_V1.Controllers
 
 
             #endregion
-
-
 
             return result;
         }

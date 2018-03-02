@@ -144,7 +144,6 @@ namespace AnJiaWebServer_V1.Controllers
                 string Email = reader["Email"].ToString();
                 string Phonenum = reader["Phonenum"].ToString();
                 string RegistDate = reader["RegistDate"].ToString();
-
                 var redis = new RedisHelper(Constants.RedisCon);
 
                 error = new ErrorRootobject

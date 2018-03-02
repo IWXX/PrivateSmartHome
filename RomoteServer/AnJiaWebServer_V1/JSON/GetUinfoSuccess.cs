@@ -11,7 +11,6 @@ namespace AnJiaWebServer_V1.JSON
         public string Emali { get; set; }
         public string Sex { get; set; }
         public string PhoneNum { get; set; }
-        public string  { get; set; }
-        public string UserName { get; set; }
+
     }
 }
