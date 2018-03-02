@@ -172,7 +172,8 @@ namespace AnJiaWebServer_V1.Controllers
             if (reader.HasRows)
             {
                 conn.Close();//关闭连接
-                var accessToken = JwtManager.GenerateToken(username);//生成Token
+
+                var accessToken = JwtManager.GetJwtManager().GenerateToken(username);//生成Token
 
 
                 var redis = new RedisHelper(Constants.RedisCon);

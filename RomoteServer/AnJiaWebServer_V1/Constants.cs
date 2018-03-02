@@ -11,7 +11,7 @@ namespace AnJiaWebServer_V1
         public const string Audience = "PrivateSmartHome";
         public const string Issuer = "AnJia";
 
-        public const string RedisCon = "127.0.0.1:6379";
+        public const string RedisCon = "127.0.0.1:6379";//Redis连接字符串
 
     }
 }

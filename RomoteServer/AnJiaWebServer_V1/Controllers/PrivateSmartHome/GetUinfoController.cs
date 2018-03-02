@@ -42,11 +42,11 @@ namespace AnJiaWebServer_V1.Controllers
             Request.Headers.TryGetValue("Authorization", out JwtBearer);
             string JwtBearerString = JwtBearer.ToString();
             string[] sArray = JwtBearerString.Split(' ');
-            string acToken = sArray[1];
+            string acToken = sArray[1];//分离出Token
 
-            var claimsPrincipal = JwtManager.GetPrincipal(acToken);
+            var claimsPrincipal = JwtManager.GetPrincipal(acToken);//对Token
 
-            string uname = claimsPrincipal.Identity.Name.ToString();
+            string uname = claimsPrincipal.Identity.Name.ToString();//获取用户名
 
             
 
@@ -62,17 +62,17 @@ namespace AnJiaWebServer_V1.Controllers
              username = "username";
 
 
-            if (uname != username)
+            if (uname != username)//提交的用户名与Token不匹配
             {
                 ErrorRootobject error1 = new ErrorRootobject
                 {
                     error_code = "00001",
-                    msg = "no authentication"
+                    msg = "User and Token mismatch"
                 };
 
                 string serial1 = JsonConvert.SerializeObject(error1);//将实体类序列化为JSON字符串
 
-                result = (JObject)JsonConvert.DeserializeObject(serial);//将JSON字符串反序列化为JObject对象
+                result = (JObject)JsonConvert.DeserializeObject(serial1);//将JSON字符串反序列化为JObject对象
                 return result;
             }
             #endregion
@@ -146,8 +146,6 @@ namespace AnJiaWebServer_V1.Controllers
                 string RegistDate = reader["RegistDate"].ToString();
 
                 var redis = new RedisHelper(Constants.RedisCon);
-
-   
 
                 error = new ErrorRootobject
                 {
