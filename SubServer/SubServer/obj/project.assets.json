@@ -27607,11 +27607,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GithubProject\\PrivateSmartHome\\SubServer\\SubServer\\FacialRecognizedDoorClient.csproj",
+      "projectUniqueName": "C:\\Users\\10593\\Documents\\GitHub\\PrivateSmartHome\\SubServer\\SubServer\\FacialRecognizedDoorClient.csproj",
       "projectName": "FacialRecognizedDoorClient",
-      "projectPath": "D:\\GithubProject\\PrivateSmartHome\\SubServer\\SubServer\\FacialRecognizedDoorClient.csproj",
+      "projectPath": "C:\\Users\\10593\\Documents\\GitHub\\PrivateSmartHome\\SubServer\\SubServer\\FacialRecognizedDoorClient.csproj",
       "packagesPath": "C:\\Users\\10593\\.nuget\\packages\\",
-      "outputPath": "D:\\GithubProject\\PrivateSmartHome\\SubServer\\SubServer\\obj\\",
+      "outputPath": "C:\\Users\\10593\\Documents\\GitHub\\PrivateSmartHome\\SubServer\\SubServer\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
