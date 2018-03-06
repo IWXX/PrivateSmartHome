@@ -21,7 +21,7 @@ namespace AnJiaWebServer_V1.Controllers
  /// </summary>
 
     [Authorize]
-    [Route("PrivateSmartHome/V1/[controller]")]
+    [Route("PrivateSmartHome/api/V1/[controller]")]
     public class GetUinfoController : Controller
     {
         private readonly AnJiaContext anJiaContext;

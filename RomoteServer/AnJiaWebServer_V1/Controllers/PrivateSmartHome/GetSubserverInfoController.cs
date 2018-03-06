@@ -9,8 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AnJiaWebServer_V1.Controllers
 {
-    [Authorize]
-    [Route("api/[controller]")]
+   // [Authorize]
+    [Route("PrivateSmartHome/api/V1/[controller]")]
     public class GetSubserverInfoController : Controller
     {
         // GET: api/values
@@ -21,7 +21,7 @@ namespace AnJiaWebServer_V1.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
+   
         public string Get(int id)
         {
             return "value";

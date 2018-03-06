@@ -10,13 +10,21 @@ namespace AnJiaWebServer_V1.JSON
     {
         public int Devicenum { get; set; }
         public Deviceinfo[] DeviceInfo { get; set; }
+
+        public DeviceList(int count)
+        {
+    
+            Devicenum = count;
+            DeviceInfo = new Deviceinfo[count];
+        }
+       
     }
 
     public class Deviceinfo
     {
+        public string  DeviceID { get; set; }
         public string DeviceType { get; set; }
         public string DeviceIP { get; set; }
-        public string SubserverId { get; set; }
         public string DeviceNickname { get; set; }
     }
 

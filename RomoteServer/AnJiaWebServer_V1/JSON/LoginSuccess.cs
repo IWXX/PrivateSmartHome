@@ -8,6 +8,7 @@ namespace AnJiaWebServer_V1.JSON
     public class LoginSuccessRootobject
     {
         public string AccessToken { get; set; }
+
     }
 
 }
