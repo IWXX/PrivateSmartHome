@@ -15,7 +15,7 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome
     [Route("PrivateSmartHome/api/V1/[controller]")]
     public class UpdateDeviceInfoController : Controller
     {
-        [HttpPost]
+        [HttpPut]
         public JObject Post([FromBody]object value)//更改Devices的信息，比如自定义名称
         {
             JObject result;
@@ -34,7 +34,6 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome
             };
 
             string serial = JsonConvert.SerializeObject(errorRootobject);
-
             result = (JObject)JsonConvert.DeserializeObject(serial);
 
             return result;

@@ -15,16 +15,8 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome
     //   [Authorize]
     [Route("PrivateSmartHome/api/V1/[controller]")]
 
-    public class DevicesController : Controller
+    public class GetDevicesListController : Controller
     {
-        // GET: api/Devics
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET: api/Devics/5
         [HttpGet("{id}", Name = "username")]
         public async Task<JObject> Get(string username)//通过用户名来获取设备列表
         {
@@ -43,9 +35,6 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome
 
             return result;
         }
-
-
-
         public DeviceList GetTestDeviceList()
         {
             int count = 11;
@@ -68,22 +57,5 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome
             return deviceList;
         }
 
-        // POST: api/Devics
-        [HttpPost]
-        public void Post([FromBody]string value)
-        {
-        }
-        
-        // PUT: api/Devics/5
-        [HttpPut("{id}")] 
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-        
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]       
-        public void Delete(int id)
-        {
-        }
     }
 }

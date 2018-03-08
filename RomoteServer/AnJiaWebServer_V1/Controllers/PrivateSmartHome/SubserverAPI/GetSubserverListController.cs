@@ -16,7 +16,7 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome
     {
 
         // GET: api/GetSubserverList/5
-        [HttpGet("{id}", Name = "username1")]
+        [HttpGet("{id}")]
         public async Task<JObject> Get(string username)//通过用户名来获取设备列表
         {
 

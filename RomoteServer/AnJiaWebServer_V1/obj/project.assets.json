@@ -13169,9 +13169,6 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "C:\\Users\\10593\\Documents\\GitHub\\PrivateSmartHome\\RomoteServer\\AnJiaWebServer_V1\\AnJiaWebServer_V1.csproj",
       "projectName": "AnJiaWebServer_V1",

@@ -14,7 +14,7 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome
     public class DeleteDeviceController : Controller
     {
         [HttpDelete]
-        public JObject Delete()//将设备解绑删除
+        public JObject Delete([FromBody]object value)//将设备解绑删除
         {
 
             JObject result;
@@ -31,11 +31,8 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome
             };
 
             string serial = JsonConvert.SerializeObject(errorRootobject);
-
-
             result = (JObject)JsonConvert.DeserializeObject(serial);
 
-            //
             return result;
         }
     }
