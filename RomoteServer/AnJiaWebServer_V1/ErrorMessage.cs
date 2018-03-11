@@ -22,7 +22,7 @@ namespace AnJiaWebServer_V1
 
     public class ErrorRootobject
     {
-        public string error_code { get; set; }
+        public string ReturnCode { get; set; }//返回码 代表一些
         public string msg { get; set; }
     }
 }

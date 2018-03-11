@@ -20,6 +20,15 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome
         [HttpGet("{id}", Name = "username")]
         public async Task<JObject> Get(string username)//通过用户名来获取设备列表
         {
+            #region 注销检测
+            string token = JwtManager.GetRequestTokenString(Request);
+            var redis = RedisHelper.GetRedisHelper();
+            if (!redis.SignInCheck(token))
+            {
+                return null;//返回错误信息提示重新登录
+            }
+            #endregion
+
 
             JObject result=null;
 

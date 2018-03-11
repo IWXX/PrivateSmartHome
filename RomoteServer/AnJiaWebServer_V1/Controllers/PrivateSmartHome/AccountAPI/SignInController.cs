@@ -39,7 +39,7 @@ namespace AnJiaWebServer_V1.Controllers
 
 
             ErrorRootobject error = new ErrorRootobject();
-            error.error_code = "00001";
+            error.ReturnCode = "00001";
             error.msg = "JSON format error";
 
             string serial = JsonConvert.SerializeObject(error);//将实体类序列化为JSON字符串
@@ -57,7 +57,7 @@ namespace AnJiaWebServer_V1.Controllers
             }
             catch
             {
-                error.error_code = "00001";
+                error.ReturnCode = "00001";
                 error.msg = "JSON format error";
 
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化为JSON字符串
@@ -70,7 +70,7 @@ namespace AnJiaWebServer_V1.Controllers
             #region 用户名以及密码的判空
             if (username == "" || password == "")
             {
-                error.error_code = "00009";
+                error.ReturnCode = "00009";
                 error.msg = "Username or password can not be null";
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化为JSON字符串
                 result = (JObject)JsonConvert.DeserializeObject(serial);//将JSON字符串反序列化为JObject对象
@@ -87,7 +87,7 @@ namespace AnJiaWebServer_V1.Controllers
             {
                 //失败后返回错误原因：
                 error = new ErrorRootobject();
-                error.error_code = "0002";
+                error.ReturnCode = "0002";
                 error.msg = "Username contains dangerous characters ";
 
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化   为JSON字符串
@@ -99,7 +99,7 @@ namespace AnJiaWebServer_V1.Controllers
             {
                 //失败后返回错误原因：
                 error = new ErrorRootobject();
-                error.error_code = "0003";
+                error.ReturnCode = "0003";
                 error.msg = "Password contains dangerous characters ";
 
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化   为JSON字符串
@@ -128,7 +128,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //密码不匹配返回错误原因：
                 error = new ErrorRootobject
                 {
-                    error_code = "0004",
+                    ReturnCode = "0004",
                     msg = "Username does not exist"
                 };
 
@@ -158,9 +158,7 @@ namespace AnJiaWebServer_V1.Controllers
                 conn.Close();//关闭连接
 
                 var accessToken = JwtManager.GetJwtManager().GenerateToken(username);//生成Token
-
-
-                var redis = new RedisHelper(Constants.RedisCon);
+                var redis = RedisHelper.GetRedisHelper();
 
                 redis.SetValue(username,accessToken);//在redis中建立用户名和Token的对应关系
 
@@ -169,26 +167,21 @@ namespace AnJiaWebServer_V1.Controllers
                     AccessToken = accessToken//获取一个Token
                 };
 
-
-
                     error = new ErrorRootobject
                     {
 
-                        error_code = "0010",
+                        ReturnCode = "0010",
                         msg = "Token failed to get"
                     };
                     serial = JsonConvert.SerializeObject(actoken);//将实体类序列化为JSON字符串
                     result = (JObject)JsonConvert.DeserializeObject(serial);//将JSON字符串反序列化为JObject对象
-
-                
-
             }
             else
             {
                 conn.Close();
                 //密码不匹配返回错误原因：
                 error = new ErrorRootobject();
-                error.error_code = "0005";
+                error.ReturnCode = "0005";
                 error.msg = "Incorrect username or password";
 
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化   为JSON字符串
@@ -198,8 +191,6 @@ namespace AnJiaWebServer_V1.Controllers
             reader.Dispose();//释放资源
 
             #endregion
-
-
 
             return result;
         

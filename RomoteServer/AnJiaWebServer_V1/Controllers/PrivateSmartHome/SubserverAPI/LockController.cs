@@ -29,26 +29,21 @@ namespace AnJiaWebServer_V1.Controllers
             anJiaContext = context;
             
         }
-        // GET: api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(string username)//获取设备列表
-        {
-            //根据设备ID查询数据库
-
-            return "value";
-        }
 
         // POST api/values
         [HttpPost]
         public async Task<JObject> PostAsync([FromBody]object value)
         {
+            #region 注销检测
+            string token = JwtManager.GetRequestTokenString(Request);
+            var redis = RedisHelper.GetRedisHelper();
+            if (!redis.SignInCheck(token))
+            {
+                return null;//返回错误信息提示重新登录
+            }
+            #endregion
+
             #region 变量声明以及初始化
             JObject jObject = (JObject)value;
             JObject result;
@@ -66,7 +61,7 @@ namespace AnJiaWebServer_V1.Controllers
 
             ErrorRootobject error = new ErrorRootobject
             {
-                error_code = "0001",
+                ReturnCode = "0001",
                 msg = "JSON format error"
             };
             ControlMsgRootobject controlMsg = new ControlMsgRootobject
@@ -92,7 +87,7 @@ namespace AnJiaWebServer_V1.Controllers
 
             catch (Exception)
             {
-                error.error_code = "2009";
+                error.ReturnCode = "2009";
                 error.msg = "JSON format is incorrect";
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化为JSON字符串
                 result = (JObject)JsonConvert.DeserializeObject(serial);//将JSON字符串反序列化为JObject对象
@@ -107,7 +102,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //失败后返回错误原因：
                 error = new ErrorRootobject
                 {
-                    error_code = "2003",
+                    ReturnCode = "2003",
                     msg = "Token contains dangerous characters "
                 };
 
@@ -121,7 +116,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //失败后返回错误原因：
                 error = new ErrorRootobject
                 {
-                    error_code = "2002",
+                    ReturnCode = "2002",
                     msg = "subserverid contains dangerous characters "
                 };
 
@@ -135,7 +130,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //失败后返回错误原因：
                 error = new ErrorRootobject
                 {
-                    error_code = "2008",
+                    ReturnCode = "2008",
                     msg = "deviceip contains dangerous characters "
                 };
 
@@ -154,7 +149,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //失败后返回错误原因：
                 error = new ErrorRootobject
                 {
-                    error_code = "2005",
+                    ReturnCode = "2005",
                     msg = "subserverid is not available "
                 };
 
@@ -168,7 +163,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //失败后返回错误原因：
                 error = new ErrorRootobject
                 {
-                    error_code = "2006",
+                    ReturnCode = "2006",
                     msg = "deviceIP is not available "
                 };
 
@@ -203,7 +198,7 @@ namespace AnJiaWebServer_V1.Controllers
                 conn.Close();
                 error = new ErrorRootobject
                 {
-                    error_code = "1004",
+                    ReturnCode = "1004",
                     msg = " Invalid access_Token "
                 };
 
@@ -263,7 +258,7 @@ namespace AnJiaWebServer_V1.Controllers
                     bool sendSuccess=   await WebsocketClient.SendToSubserverAsync(subServerId, controlMsg);//发送给指定MAC信息
                     if (sendSuccess)
                     {
-                        error.error_code = "2000";
+                        error.ReturnCode = "2000";
                         error.msg = " ControlMsg send success";
 
                         serial = JsonConvert.SerializeObject(error);
@@ -272,7 +267,7 @@ namespace AnJiaWebServer_V1.Controllers
                     else
                     {
                         //
-                        error.error_code = "2001";
+                        error.ReturnCode = "2001";
                         error.msg = "  Subserver offline";
                         serial = JsonConvert.SerializeObject(error);
                         result = (JObject)JsonConvert.DeserializeObject(serial);
@@ -286,7 +281,7 @@ namespace AnJiaWebServer_V1.Controllers
                 else
                 {
                     //提示没有对此服务器操作权限
-                    error.error_code = "2007";
+                    error.ReturnCode = "2007";
                     error.msg = " You do not have permission to operate this subserver ";
 
                     serial = JsonConvert.SerializeObject(error);

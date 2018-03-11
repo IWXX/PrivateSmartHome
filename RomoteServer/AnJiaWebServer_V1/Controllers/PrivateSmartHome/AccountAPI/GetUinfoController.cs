@@ -52,7 +52,7 @@ namespace AnJiaWebServer_V1.Controllers
 
             ErrorRootobject error = new ErrorRootobject
             {
-                error_code = "00001",
+                ReturnCode = "00001",
                 msg = "JSON format error"
             };
 
@@ -66,7 +66,7 @@ namespace AnJiaWebServer_V1.Controllers
             {
                 ErrorRootobject error1 = new ErrorRootobject
                 {
-                    error_code = "00001",
+                    ReturnCode = "00001",
                     msg = "User and Token mismatch"
                 };
 
@@ -85,7 +85,7 @@ namespace AnJiaWebServer_V1.Controllers
             }
             catch
             {
-                error.error_code = "00001";
+                error.ReturnCode = "00001";
                 error.msg = "JSON format error";
 
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化为JSON字符串
@@ -98,7 +98,7 @@ namespace AnJiaWebServer_V1.Controllers
             #region 用户名以及密码的判空
             if (username == "")
             {
-                error.error_code = "00009";
+                error.ReturnCode = "00009";
                 error.msg = "Username can not be null";
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化为JSON字符串
                 result = (JObject)JsonConvert.DeserializeObject(serial);//将JSON字符串反序列化为JObject对象
@@ -114,7 +114,7 @@ namespace AnJiaWebServer_V1.Controllers
             {
                 //失败后返回错误原因：
                 error = new ErrorRootobject();
-                error.error_code = "0002";
+                error.ReturnCode = "0002";
                 error.msg = "Username contains dangerous characters ";
 
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化   为JSON字符串
@@ -144,12 +144,12 @@ namespace AnJiaWebServer_V1.Controllers
                 string Email = reader["Email"].ToString();
                 string Phonenum = reader["Phonenum"].ToString();
                 string RegistDate = reader["RegistDate"].ToString();
-                var redis = new RedisHelper(Constants.RedisCon);
+                var redis = RedisHelper.GetRedisHelper();
 
                 error = new ErrorRootobject
                 {
 
-                    error_code = "0010",
+                    ReturnCode = "0010",
                     msg = "Token failed to get"
                 };
                // serial = JsonConvert.SerializeObject(actoken);//将实体类序列化为JSON字符串
@@ -163,7 +163,7 @@ namespace AnJiaWebServer_V1.Controllers
                 conn.Close();
                 //密码不匹配返回错误原因：
                 error = new ErrorRootobject();
-                error.error_code = "0005";
+                error.ReturnCode = "0005";
                 error.msg = "Incorrect username or password";
 
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化   为JSON字符串

@@ -45,12 +45,20 @@ namespace AnJiaWebServer_V1.Controllers
         [HttpPost]
         public async Task<JObject> PostAsync([FromBody]object value)
         {
+            #region 注销检测
+            string token = JwtManager.GetRequestTokenString(Request);
+            var redis = RedisHelper.GetRedisHelper();
+            if (!redis.SignInCheck(token))
+            {
+                return null;//返回错误信息提示重新登录
+            }
+            #endregion
             #region 变量声明以及初始化
             JObject regform = (JObject)value;
             JObject result;//返回结果
             ErrorRootobject error = new ErrorRootobject
             {
-                error_code = "00001",
+                ReturnCode = "00001",
                 msg = "JSON format error"
             };
             string serial = JsonConvert.SerializeObject(error);//将实体类序列化为JSON字符串
@@ -72,7 +80,7 @@ namespace AnJiaWebServer_V1.Controllers
             }
             catch (Exception)
             {
-                error.error_code = "0009";
+                error.ReturnCode = "0009";
                 error.msg = "JSON format error";
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化为JSON字符串
                 result = (JObject)JsonConvert.DeserializeObject(serial);//将JSON字符串反序列化为JObject对象
@@ -102,7 +110,7 @@ namespace AnJiaWebServer_V1.Controllers
                     //失败后返回错误原因：
                     error = new ErrorRootobject
                     {
-                        error_code = i.Key,
+                        ReturnCode = i.Key,
                         msg = " contains dangerous characters "
                     };
 
@@ -159,7 +167,7 @@ namespace AnJiaWebServer_V1.Controllers
 
                 error = new ErrorRootobject
                 {
-                    error_code = "0012",
+                    ReturnCode = "0012",
                     msg = "Token Expire"                //令牌过期
                 };
 
@@ -189,7 +197,7 @@ namespace AnJiaWebServer_V1.Controllers
                 DbDataReader BindingReader = await command.ExecuteReaderAsync();
                 error = new ErrorRootobject
                 {
-                    error_code = "0000",
+                    ReturnCode = "0000",
                     msg = "Update success"
                 };
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化   为JSON字符串
@@ -203,7 +211,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //绑定失败
                 error = new ErrorRootobject
                 {
-                    error_code = "0012",
+                    ReturnCode = "0012",
                     msg = "Update failed"
                 };
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化   为JSON字符串

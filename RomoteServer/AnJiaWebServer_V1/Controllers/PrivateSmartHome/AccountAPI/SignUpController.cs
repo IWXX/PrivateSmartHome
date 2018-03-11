@@ -59,7 +59,7 @@ namespace AnJiaWebServer_V1.Controllers
             JObject regform = (JObject)value;//接收注册表单
             JObject result;//返回结果
             ErrorRootobject error = new ErrorRootobject();
-            error.error_code = "00001";
+            error.ReturnCode = "00001";
             error.msg = "JSON format error";
 
             string serial = JsonConvert.SerializeObject(error);//将实体类序列化为JSON字符串
@@ -79,7 +79,7 @@ namespace AnJiaWebServer_V1.Controllers
             }
             catch (Exception)
             {
-                error.error_code = "0009";
+                error.ReturnCode = "0009";
                 error.msg = "JSON format error";
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化为JSON字符串
                 result = (JObject)JsonConvert.DeserializeObject(serial);//将JSON字符串反序列化为JObject对象
@@ -89,7 +89,7 @@ namespace AnJiaWebServer_V1.Controllers
 
             if (username == "" || password=="")
             {
-                error.error_code = "00009";
+                error.ReturnCode = "00009";
                 error.msg = "Username or password can not be null";
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化为JSON字符串
                 result = (JObject)JsonConvert.DeserializeObject(serial);//将JSON字符串反序列化为JObject对象
@@ -108,7 +108,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //失败后返回错误原因：
                 error = new ErrorRootobject
                 {
-                    error_code = "0002",
+                    ReturnCode = "0002",
                     msg = "Username contains dangerous characters "
                 };
 
@@ -122,7 +122,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //失败后返回错误原因：
                 error = new ErrorRootobject
                 {
-                    error_code = "0003",
+                    ReturnCode = "0003",
                     msg = "Password contains dangerous characters "
                 };
 
@@ -137,7 +137,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //失败后返回错误原因：
                 error = new ErrorRootobject
                 {
-                    error_code = "0006",
+                    ReturnCode = "0006",
                     msg = "The e-mail address format is incorrect"
                 };
 
@@ -152,7 +152,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //失败后返回错误原因：
                 error = new ErrorRootobject
                 {
-                    error_code = "0007",
+                    ReturnCode = "0007",
                     msg = "The phone number format is incorrect"
                 };
 
@@ -180,7 +180,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //用户名已经被注册
                 error = new ErrorRootobject
                 {
-                    error_code = "0008",
+                    ReturnCode = "0008",
                     msg = "Username has been registered"
                 };
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化   为JSON字符串
@@ -208,7 +208,7 @@ namespace AnJiaWebServer_V1.Controllers
                 DbDataReader reader = await command.ExecuteReaderAsync();//默认值
                 error = new ErrorRootobject
                 {
-                    error_code = "0000",
+                    ReturnCode = "0000",
                     msg = "Register Successful"
                 };
 
@@ -225,7 +225,7 @@ namespace AnJiaWebServer_V1.Controllers
 
                 error = new ErrorRootobject
                 {
-                    error_code = "0011",
+                    ReturnCode = "0011",
                     msg = "Registration failed"
                 };
 

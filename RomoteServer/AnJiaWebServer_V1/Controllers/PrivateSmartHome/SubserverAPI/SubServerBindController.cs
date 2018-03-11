@@ -40,7 +40,15 @@ namespace AnJiaWebServer_V1.Controllers
         [HttpPost]
         public async Task<JObject> PostAsync([FromBody]object value)
         {
-  
+            #region 注销检测
+            string token = JwtManager.GetRequestTokenString(Request);
+            var redis = RedisHelper.GetRedisHelper();
+            if (!redis.SignInCheck(token))
+            {
+                return null;//返回错误信息提示重新登录
+            }
+            #endregion
+
             #region 变量声明以及初始化
             JObject jObject = (JObject)value;
             JObject result;
@@ -54,7 +62,7 @@ namespace AnJiaWebServer_V1.Controllers
 
             ErrorRootobject error = new ErrorRootobject
             {
-                error_code = "0001",
+                ReturnCode = "0001",
                 msg = "JSON format error"
             };
             string serial = JsonConvert.SerializeObject(error);
@@ -72,7 +80,7 @@ namespace AnJiaWebServer_V1.Controllers
             }
             catch (Exception)
             {
-                error.error_code = "1001";
+                error.ReturnCode = "1001";
                 error.msg = "JSON format is incorrect";
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化为JSON字符串
                 result = (JObject)JsonConvert.DeserializeObject(serial);//将JSON字符串反序列化为JObject对象
@@ -87,7 +95,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //失败后返回错误原因：
                 error = new ErrorRootobject
                 {
-                    error_code = "1003",
+                    ReturnCode = "1003",
                     msg = "Token contains dangerous characters "
                 };
 
@@ -101,7 +109,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //失败后返回错误原因：
                 error = new ErrorRootobject
                 {
-                    error_code = "1002",
+                    ReturnCode = "1002",
                     msg = "MAC contains dangerous characters "
                 };
 
@@ -119,7 +127,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //失败后返回错误原因：
                 error = new ErrorRootobject
                 {
-                    error_code = "1011",
+                    ReturnCode = "1011",
                     msg = "MAC is not available "
                 };
 
@@ -152,7 +160,7 @@ namespace AnJiaWebServer_V1.Controllers
                 conn.Close();
                 error = new ErrorRootobject
                 {
-                    error_code = "1004",
+                    ReturnCode = "1004",
                     msg = " Invalid access_Token "
                 };
 
@@ -180,7 +188,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //后期可以设置让MAC地址为主键
                 BindedReader.Read();
                 string buser = BindedReader["Username"].ToString();
-                error.error_code = "1005";
+                error.ReturnCode = "1005";
                 error.msg = " This Subserver is owned by "+buser;
 
                 serial = JsonConvert.SerializeObject(error);
@@ -208,7 +216,7 @@ namespace AnJiaWebServer_V1.Controllers
                 DbDataReader BindingReader = await command.ExecuteReaderAsync();
                 error = new ErrorRootobject
                 {
-                    error_code = "0008",
+                    ReturnCode = "0008",
                     msg = "SubServer binding success"
                 };
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化   为JSON字符串
@@ -222,7 +230,7 @@ namespace AnJiaWebServer_V1.Controllers
                 //绑定失败
                 error = new ErrorRootobject
                 {
-                    error_code = "0009",
+                    ReturnCode = "0009",
                     msg = "SubServer binding failed"
                 };
                 serial = JsonConvert.SerializeObject(error);//将实体类序列化   为JSON字符串

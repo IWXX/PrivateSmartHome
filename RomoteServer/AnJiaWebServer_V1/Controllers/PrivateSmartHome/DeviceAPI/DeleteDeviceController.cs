@@ -16,7 +16,14 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome
         [HttpDelete]
         public JObject Delete([FromBody]object value)//将设备解绑删除
         {
-
+            #region 注销检测
+            string token = JwtManager.GetRequestTokenString(Request);
+            var redis = RedisHelper.GetRedisHelper();
+            if (!redis.SignInCheck(token))
+            {
+                return null;//返回错误信息提示重新登录
+            }
+            #endregion
             JObject result;
             #region 具体逻辑
 
@@ -26,7 +33,7 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome
             #endregion
             ErrorRootobject errorRootobject = new ErrorRootobject()
             {
-                error_code = "11111",
+                ReturnCode = "11111",
                 msg = "DeviceInfo Delete Successful"
             };
 

@@ -18,6 +18,14 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome
         [HttpPut]
         public JObject Post([FromBody]object value)//更改Devices的信息，比如自定义名称
         {
+            #region 注销检测
+            string token = JwtManager.GetRequestTokenString(Request);
+            var redis = RedisHelper.GetRedisHelper();
+            if (!redis.SignInCheck(token))
+            {
+                return null;//返回错误信息提示重新登录
+            }
+            #endregion
             JObject result;
             #region 具体逻辑
 
@@ -29,7 +37,7 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome
             #endregion
             ErrorRootobject errorRootobject = new ErrorRootobject()
             {
-                error_code = "11111",
+                ReturnCode = "11111",
                 msg = "DeviceInfo Update Successful"
             };
 

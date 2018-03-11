@@ -156,7 +156,7 @@ namespace AnJiaWebServer_V1
                         macAvailable = true;
                         ErrorRootobject error = new ErrorRootobject
                         {
-                            error_code = "1001",
+                            ReturnCode = "1001",
                             msg = "JSON format error"
                         };
                         string serial = JsonConvert.SerializeObject(error);
@@ -184,7 +184,7 @@ namespace AnJiaWebServer_V1
                                 //后期可以设置让MAC地址为主键
                                 BindedReader.Read();
                                 string buser = BindedReader["Username"].ToString();
-                                error.error_code = "1005";
+                                error.ReturnCode = "1005";
                                 error.msg = " This Subserver is owned by " + buser;
 
                                 serial = JsonConvert.SerializeObject(error);
@@ -202,7 +202,7 @@ namespace AnJiaWebServer_V1
                             else
                             {
                                 var buffer1= new byte[1024 * 4];
-                                error.error_code = "1006";
+                                error.ReturnCode = "1006";
                                 error.msg = " SubserverID is not bound  ";
 
                                 serial = JsonConvert.SerializeObject(error);
