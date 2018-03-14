@@ -28,10 +28,18 @@ namespace AnJiaWebServer_V1.Controllers
         {
             anJiaContext = context;
         }
-
+        /// <summary>
+        /// 接口名：登录API
+        /// 功能：进行用户登录并发放Token
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         [HttpPost]   
         public async System.Threading.Tasks.Task<JObject> PostAsync([FromBody]object value)
         {
+
+    
+
 
             #region 变量声明以及初始化
             JObject jObject = (JObject)value;//获取为Json对象
@@ -157,10 +165,15 @@ namespace AnJiaWebServer_V1.Controllers
             {
                 conn.Close();//关闭连接
 
-                var accessToken = JwtManager.GetJwtManager().GenerateToken(username);//生成Token
-                var redis = RedisHelper.GetRedisHelper();
 
-                redis.SetValue(username,accessToken);//在redis中建立用户名和Token的对应关系
+                #region 单点登录逻辑
+                //检测是Redis中是否已经有关联
+                var redis = RedisHelper.GetRedisHelper();
+                if (redis.SignInCheck(username))  RedisHelper.GetRedisHelper().DeleteKey(username);//删除原来的对应关系
+                var accessToken = JwtManager.GetJwtManager().GenerateToken(username);//生成新Token
+                redis.SetValue(username, accessToken);//在redis中建立用户名和Token的对应关系
+
+                #endregion
 
                 LoginSuccessRootobject actoken = new LoginSuccessRootobject
                 {

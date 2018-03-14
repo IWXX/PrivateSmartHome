@@ -23,6 +23,10 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome.AccountAPI
         /// <summary>
         /// 传入参数 用户名 和 ShareCode
         /// 
+        /// Device的分享是一对多的
+        /// 在Redis中建立一个关系 Device=>{ user1,user2,user3  }
+        /// 其中列表为Device分享给的用户列表
+        /// 设备主可以通过修改对应关系来进行增加或者撤销分享
         /// </summary>
         /// <param name="value"></param>
         [HttpPost]

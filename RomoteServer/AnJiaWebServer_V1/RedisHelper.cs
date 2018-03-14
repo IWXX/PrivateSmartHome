@@ -67,9 +67,14 @@ namespace AnJiaWebServer_V1
             return Db.KeyDelete(key);
         }
 
-        public bool SignInCheck(string token)//检查登录是否有效
+        /// <summary>
+        /// 检测当前用户是否登录
+        /// </summary>
+        /// <param name="username">用户名</param>
+        /// <returns>已登陆返回 true 否则 false</returns>
+        public bool SignInCheck(string username)//检查登录是否有效
         {
-                string value = GetValue(token);
+                string value = GetValue(username);
                 if (value == null)
                 {
                     return false;

@@ -30,7 +30,7 @@ using IdentityModel;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using AnJiaWebServer_V1.Models;
 using Microsoft.AspNetCore.Identity;
-
+using AnJiaWebServer_V1.Middleware;
 namespace AnJiaWebServer_V1
 {
     public class Startup
@@ -51,10 +51,7 @@ namespace AnJiaWebServer_V1
 
         public IConfiguration Configuration { get; }
 
-
-        
-        // This method gets called by the runtime. Use this method to add services to the container.
-        //运行时调用此方法，使用这个方法添加服务
+        //运行时调用此方法，使用这个方法添加服务到服务容器
         //上下文注册依赖关系注入
         public void ConfigureServices(IServiceCollection services)
         {
@@ -104,8 +101,7 @@ namespace AnJiaWebServer_V1
 
         }
 
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        //配置HTTP请求管道
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(LogLevel.Debug);
@@ -117,8 +113,10 @@ namespace AnJiaWebServer_V1
                 app.UseBrowserLink();
 
             }
-            app.UseAuthentication();
-            app.UseWebSockets();
+            app.UseRequestIP();//添加自定义的中间件
+            app.UseAuthentication();//添加身份验证中间件
+            app.UseWebSockets();//添加webSocket中间件
+     
 
 #if UseOptions
             #region UseWebSocketsOptions
@@ -227,17 +225,13 @@ namespace AnJiaWebServer_V1
                 }
                 else
                 {
-                    await next();
+                    await next();//调用下一个中间件
                 }
 
             });
             #endregion
-            app.UseFileServer();
-  
+            app.UseFileServer();//文件服务器中间件
             app.UseStaticFiles();
-
-
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

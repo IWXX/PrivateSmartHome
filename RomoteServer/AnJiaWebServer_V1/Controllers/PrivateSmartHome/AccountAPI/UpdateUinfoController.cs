@@ -45,6 +45,10 @@ namespace AnJiaWebServer_V1.Controllers
         [HttpPost]
         public async Task<JObject> PostAsync([FromBody]object value)
         {
+            #region 单点登录检测
+
+            #endregion
+
             #region 注销检测
             string token = JwtManager.GetRequestTokenString(Request);
             var redis = RedisHelper.GetRedisHelper();
@@ -53,6 +57,7 @@ namespace AnJiaWebServer_V1.Controllers
                 return null;//返回错误信息提示重新登录
             }
             #endregion
+
             #region 变量声明以及初始化
             JObject regform = (JObject)value;
             JObject result;//返回结果

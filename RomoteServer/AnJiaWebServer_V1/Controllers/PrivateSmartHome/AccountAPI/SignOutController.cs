@@ -17,17 +17,24 @@ namespace AnJiaWebServer_V1.Controllers
     [Route("api/[controller]")]
     public class SignOutController : Controller//注销登录操作
     {
-
-        // DELETE api/values/5
+        /// <summary>
+        /// 接口名：注销API
+        /// 功能：对指定用户进行登录状态注销
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns>注销结果</returns>
+    
         [HttpDelete("{username}")]
         public JObject Delete(string username)
         {
+         
             #region 注销检测
-            string token = JwtManager.GetRequestTokenString(Request);
             var redis = RedisHelper.GetRedisHelper();
-            if (!redis.SignInCheck(token))
+            if (!redis.SignInCheck(username))
             {
-                return null;//返回错误信息提示重新登录
+                //如果访问接口时，该用户已经处于注销状态
+                //则返回 提示信息已注销
+                return JsonHelper.JResult("3001", "SignOut Repeat");//返回错误信息提示重新登录
             }
             #endregion
 
@@ -36,7 +43,7 @@ namespace AnJiaWebServer_V1.Controllers
             redis.DeleteKey(username);//删除用户的Token关联
             #endregion
 
-            return null;
+            return JsonHelper.JResult("3000","SignOut Success");
 
         }
     }
