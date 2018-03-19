@@ -4579,7 +4579,7 @@
     "Microsoft.AspNetCore.Diagnostics/2.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-aYyMlv17p647mv9f3BUQdFkwVvWQ2i3hkw6jCiUhMAflRpjEOxhu4PrC1mia++Z7ZdghIgdZNzJXpDH2XMq25Q==",
+      "sha512": "sha512-DaB6ILGacQ5dWHAvEYxqpHDARgzdYEwke1iDwLzIyatpcT6nxiUgCWbaAYasU78zzFBwHFBg4tSx+q/zQ1AQDg==",
       "path": "microsoft.aspnetcore.diagnostics/2.0.1",
       "hashPath": "microsoft.aspnetcore.diagnostics.2.0.1.nupkg.sha512"
     },
@@ -4901,14 +4901,14 @@
     "Microsoft.AspNetCore.Server.IISIntegration/2.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-bagPgHYvSqF91M7SZv4qZ8hZZqdej3R4aclPOFNzroLxlFgbAAXwbApRbDG/1ZTCYtXFQ83QCHwUXgZ5hmmMcg==",
+      "sha512": "sha512-u8tHZzAyUBZTYqPJeUREwwAsBZJI/nUDWKdZZGIPvjV44AqKCfhesErs/hn+j/iqcYK16266reoBa5DNlLtaxg==",
       "path": "microsoft.aspnetcore.server.iisintegration/2.0.1",
       "hashPath": "microsoft.aspnetcore.server.iisintegration.2.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Server.Kestrel/2.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SX7+2E6npBQ7vO5xn8dAo1vnWnjBE3t9b+tEsLNL7ewjQTJE85TkJ9cyjIorOtOn+duUxshmgzbMzhpf7uUn3Q==",
+      "sha512": "sha512-whOnoNMB0L7G1UtYJrAFvob4G9peSAIjSTM3cRX1jDyGzhb/r7x49vaeQ+F6WhaTssNXdhUCurElYM57UfbuaQ==",
       "path": "microsoft.aspnetcore.server.kestrel/2.0.1",
       "hashPath": "microsoft.aspnetcore.server.kestrel.2.0.1.nupkg.sha512"
     },
@@ -4957,14 +4957,14 @@
     "Microsoft.AspNetCore.StaticFiles/2.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-F5qVFsyKsVWKS2tgnJ8MVXkc4FNt6NMybRl7gsZw90G7rhscu4M9k2rW0sEtaUS2ZyKu0ObMU2BVu8OjPCUZjQ==",
+      "sha512": "sha512-TSw9cmcM+S6A11tmiqTRzdOyILHqAEosumc3xCgGocn8YDqeLHbWUZiC78X+b4qjXtesVYF3Br8EtobsTjlMuA==",
       "path": "microsoft.aspnetcore.staticfiles/2.0.1",
       "hashPath": "microsoft.aspnetcore.staticfiles.2.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.WebSockets/2.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-J7JAWvl/q/eUm0JsJZ/FdzU6WS08L8ErVCsDiL+kYz4hLcutR84qkpi7cxbPYT0LEE8bhUWYPNCUOJ1rFSlcBQ==",
+      "sha512": "sha512-cP8S0cnNLI4ptz269cHWcvERG+qge3lCLqPTkgL5OYCnbmB32aBcYUO7z0s2JbBOX6ToVR8LMMKyhDVRR7nWGA==",
       "path": "microsoft.aspnetcore.websockets/2.0.1",
       "hashPath": "microsoft.aspnetcore.websockets.2.0.1.nupkg.sha512"
     },
@@ -5363,14 +5363,14 @@
     "Microsoft.Extensions.Logging.Console/2.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-NBjNp899FW7byDsex2ch/CkwNd2GbuHQIXCbvUVqOzSbnIsYrxOaR//BY2h2apJhnqm10IPLGkcjXxUyfAcIKA==",
+      "sha512": "sha512-129ssC/0t7qAuP/ikEaezw/mNSF47qDEP/+s5/gURq3NRobaHtmNIJ0T41gpnYwUaQb0B/6kgUJwVr++/rGycw==",
       "path": "microsoft.extensions.logging.console/2.0.0",
       "hashPath": "microsoft.extensions.logging.console.2.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging.Debug/2.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-29Zn5m9yb4NEP+qbeLl+7F2lDskDfrs8NbrM8eJ+k/pYE8JksRUEFxHp1bcpGSfGP9w0pMQMOKrVcwD3u5sPog==",
+      "sha512": "sha512-c+oEzps/ajhREXigQnuzLJFWPLZzc46jkFlG6GNm3Sd0XqfoSIbw151QWDgmVuO68kEx8XAdgw9zxEhwDzWXWQ==",
       "path": "microsoft.extensions.logging.debug/2.0.0",
       "hashPath": "microsoft.extensions.logging.debug.2.0.0.nupkg.sha512"
     },

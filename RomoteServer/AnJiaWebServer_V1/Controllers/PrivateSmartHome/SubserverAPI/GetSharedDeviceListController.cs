@@ -19,7 +19,7 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome.SubserverAPI
         }
 
         // GET: api/GetSharedDeviceList/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{if}")]
         public string Get(int id)
         {
             return "value";

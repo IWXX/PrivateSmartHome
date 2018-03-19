@@ -1,77 +1,162 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] 安家物联网</title>
+    <title>@ViewData["Title"] 安家智联</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Tennis Club Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script src="~/js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <!-- FlexSlider -->
+    <link rel="stylesheet" href="~/css/flexslider.css" type="text/css" media="screen" />
+    <!-- FlexSlider -->
+    <!-- script -->
+    <link rel="stylesheet" href="~/css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+    <script src="~/js/jquery.chocolat.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(function () {
+            $('.gallery-grid a').Chocolat();
+        });
+    </script>
+    <!-- script -->
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="~/js/move-top.js"></script>
+    <script type="text/javascript" src="~/js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <!-- header -->
+    <div class="header">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">开发人员中心</a>
+            <div class="header-left">
+                <a href="index.html">安家智联 <span>简化您的生活</span></a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">主页</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">文档</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Blog">关于</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">联系</a></li>
-
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a asp-area="" asp-controller="Account" asp-action="Register">注册 </a></li>
-                    <li><a asp-area="" asp-controller="Account" asp-action="Login">登录</a></li>
-                </ul>
+            <div class="header-left1">
+                <p></p>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="header-nav">
+        <div class="container">
+            <div class="header-nav-bottom">
+                <nav class="navbar navbar-default">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="navbar-collapse nav-wil collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 0px;">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a asp-area="" asp-controller="Home" asp-action="Index">主页</a></li>
+                            <li><a href="#about" class="scroll">项目</a></li>
+                            <li><a href="#video" class="scroll">视频</a></li>
+                            <li><a href="#team" class="scroll">团队</a></li>
+                            <li><a href="#gallery" class="scroll">图片</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
             </div>
         </div>
-    </nav>
+    </div>
+    <!-- //header -->
+    <!-- banner -->
+    <!-- //banner -->
+    <div class="banner"></div>
+
+
+
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; 2017 - 大葱随笔 <a href="www.miitbeian.gov.cn ">豫ICP备16034049号-3</a> </p>
-        </footer>
     </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer-grids">
+                <div class="footer-grid-left">
+                    <p>&copy; 2017 - AnJiaIOT <a href="www.miitbeian.gov.cn ">豫ICP备16034049号-3</a> </p>
+                </div>
+                <div class="footer-grid-right">
+                    <ul>
+                        <li><a href="#" class="facebook"></a></li>
+                        <li><a href="#" class="in"></a></li>
+                        <li><a href="#" class="p"></a></li>
+                        <li><a href="#" class="dribble"></a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- //footer -->
+    <!-- for bootstrap working -->
+    <script src="~/js/bootstrap.js"></script>
+    <!-- //for bootstrap working -->
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+                var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+                };
+            */
 
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
+            $().UItoTop({ easingType: 'easeOutQuart' });
 
+        });
+    </script>
+
+    <!--
+         <environment include="Development">
+           <script src="~/lib/jquery/dist/jquery.js"></script>
+           <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+           <script src="~/js/site.js" asp-append-version="true"></script>
+       </environment>
+       <environment exclude="Development">
+           <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                   asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                   asp-fallback-test="window.jQuery"
+                   crossorigin="anonymous"
+                   integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+           </script>
+           <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                   asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                   asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                   crossorigin="anonymous"
+                   integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+           </script>
+           <script src="~/js/site.min.js" asp-append-version="true"></script>
+       </environment>
+
+        -->
     @RenderSection("Scripts", required: false)
 </body>
 </html>

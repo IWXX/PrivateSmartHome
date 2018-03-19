@@ -24,7 +24,7 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome.SubserverAPI
         }
 
         // GET: api/GetShareOutList/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{is}")]
         public string Get(int id)
         {
             return "value";

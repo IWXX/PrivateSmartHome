@@ -113,7 +113,7 @@ namespace AnJiaWebServer_V1
                 app.UseBrowserLink();
 
             }
-            app.UseRequestIP();//添加自定义的中间件
+           // app.UseRequestIP();//添加自定义的中间件
             app.UseAuthentication();//添加身份验证中间件
             app.UseWebSockets();//添加webSocket中间件
      
