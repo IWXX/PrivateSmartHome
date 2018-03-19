@@ -23,10 +23,10 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome
             #region 注销检测
             string token = JwtManager.GetRequestTokenString(Request);
             var redis = RedisHelper.GetRedisHelper();
-            if (!redis.SignInCheck(token))
-            {
-                return null;//返回错误信息提示重新登录
-            }
+            //if (!redis.SignInCheck(token))
+            //{
+            //    return null;//返回错误信息提示重新登录
+            //}
             #endregion
 
 
@@ -55,6 +55,7 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome
                 deviceList.DeviceInfo[i] = new Deviceinfo()
                 {
                     DeviceID = "00000" + i,
+                    SubserverId="dfgdghdfg",
                     DeviceIP = "192.168.1.10" + (i + 1),
                     DeviceNickname = "锁具" + i,
                     DeviceType = "0"//0，代表锁具，1，2，3·····以此类推代表不同的具体设备，这个待定

@@ -26,6 +26,8 @@ namespace AnJiaWebServer_V1.JSON
         public string DeviceType { get; set; }
         public string DeviceIP { get; set; }
         public string DeviceNickname { get; set; }
+
+        public string SubserverId { get; set; }
     }
 
 }

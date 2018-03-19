@@ -160,13 +160,23 @@ namespace AnJiaWebServer_V1
         /// <returns></returns>
         public static string GetRequestTokenString(HttpRequest httpRequest)
         {
-            StringValues JwtBearer;
-            httpRequest.Headers.TryGetValue("Authorization", out JwtBearer);
-            string JwtBearerString = JwtBearer.ToString();
-            string[] sArray = JwtBearerString.Split(' ');
-            string acToken = sArray[1];//分离出Token
+            try
+            {
+                StringValues JwtBearer;
+                httpRequest.Headers.TryGetValue("Authorization", out JwtBearer);
+                string JwtBearerString = JwtBearer.ToString();
+                string[] sArray = JwtBearerString.Split(' ');
+                string acToken = sArray[1];//分离出Token
+                return acToken;
+            }
+            catch (Exception e)
+            {
+
+                return null;
+            }
+
            
-            return acToken;
+
         }
 
         public static bool ShareCodeCheck(string token)

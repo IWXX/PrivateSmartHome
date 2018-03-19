@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\OtherProjectAPI\" />
+    <Folder Include="Controllers\PrivateSmartHome\IOTManageAPI\SmartLight\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
