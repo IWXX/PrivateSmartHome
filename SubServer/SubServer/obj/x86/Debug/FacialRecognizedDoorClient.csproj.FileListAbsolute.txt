@@ -450,3 +450,4 @@ C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\obj\x86\Deb
 C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\obj\x86\Debug\resources.en-us.resfiles
 C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\obj\x86\Debug\resources.en-us.resfiles.intermediate
 C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\obj\x86\Debug\FacialRecognizedDoorClient.csproj.CopyComplete

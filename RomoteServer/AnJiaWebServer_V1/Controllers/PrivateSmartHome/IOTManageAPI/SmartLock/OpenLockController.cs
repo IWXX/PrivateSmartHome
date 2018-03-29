@@ -46,14 +46,14 @@ namespace AnJiaWebServer_V1.Controllers
         [HttpPost]
         public async Task<JObject> PostAsync([FromBody]object value)
         {
-            #region 注销检测
-            string token = JwtManager.GetRequestTokenString(Request);
-            var redis = RedisHelper.GetRedisHelper();
-            if (!redis.SignInCheck(token))
-            {
-                return null;//返回错误信息提示重新登录
-            }
-            #endregion
+            //#region 注销检测
+            //string token = JwtManager.GetRequestTokenString(Request);
+            //var redis = RedisHelper.GetRedisHelper();
+            //if (!redis.SignInCheck(token))
+            //{
+            //    return null;//返回错误信息提示重新登录
+            //}
+            //#endregion
 
             #region 变量声明以及初始化
             JObject jObject = (JObject)value;
@@ -86,10 +86,10 @@ namespace AnJiaWebServer_V1.Controllers
             #region 获取JSON内容
             try
             {
-                acToken = jObject["actoken"].ToString();
+               // acToken = jObject["actoken"].ToString();
                 subServerId = jObject["subserverId"].ToString();
                 device_Ip = jObject["deviceIP"].ToString();
-                acTokenDanger = Regex.IsMatch(acToken, @"[|;|,|\/|||||\}|\{|%|@|\*|!|\']");//排查危险字符
+              //  acTokenDanger = Regex.IsMatch(acToken, @"[|;|,|\/|||||\}|\{|%|@|\*|!|\']");//排查危险字符
                 subserveripDanger = Regex.IsMatch(subServerId, @"[|;|,|\/|||||\}|\{|%|@|\*|!|\']");
                 subserveridAvailable = true;
                 deviceipDanger = Regex.IsMatch(subServerId, @"[|;|,|\/|||||\}|\{|%|@|\*|!|\']");
@@ -188,82 +188,82 @@ namespace AnJiaWebServer_V1.Controllers
 
             controlMsg.DeviceIP = device_Ip;
 
-            #region 查询Token是否有效
-            var conn = anJiaContext.Database.GetDbConnection();
-            conn.Open();
-            var command = conn.CreateCommand();
-            string query = "SELECT Username "
-                + "FROM Users "
-                + "WHERE AccessToken = '" + acToken + "'";
-            command.CommandText = query;
-            try
-            {
-                DbDataReader unameReader = await command.ExecuteReaderAsync();
-                unameReader.Read();//Read must be called first
-                username = unameReader["Username"].ToString();
-                conn.Close();
+            //#region 查询Token是否有效
+            //var conn = anJiaContext.Database.GetDbConnection();
+            //conn.Open();
+            //var command = conn.CreateCommand();
+            //string query = "SELECT Username "
+            //    + "FROM Users "
+            //    + "WHERE AccessToken = '" + acToken + "'";
+            //command.CommandText = query;
+            //try
+            //{
+            //    DbDataReader unameReader = await command.ExecuteReaderAsync();
+            //    unameReader.Read();//Read must be called first
+            //    username = unameReader["Username"].ToString();
+            //    conn.Close();
 
-            }
-            catch (Exception)
-            {
-                conn.Close();
-                error = new ErrorRootobject
-                {
-                    ReturnCode = "1004",
-                    msg = " Invalid access_Token "
-                };
+            //}
+            //catch (Exception)
+            //{
+            //    conn.Close();
+            //    error = new ErrorRootobject
+            //    {
+            //        ReturnCode = "1004",
+            //        msg = " Invalid access_Token "
+            //    };
 
-                serial = JsonConvert.SerializeObject(error);//将实体类序列化   为JSON字符串
-                result = (JObject)JsonConvert.DeserializeObject(serial);//将JSON字符串反序列化为JObject对象
-                return result;
+            //    serial = JsonConvert.SerializeObject(error);//将实体类序列化   为JSON字符串
+            //    result = (JObject)JsonConvert.DeserializeObject(serial);//将JSON字符串反序列化为JObject对象
+            //    return result;
 
-            }
-            #endregion
+            //}
+            //#endregion
 
-            #region 查询子服务器MAC对应的用户名
-            //查询MAC是否匹配有Username保证了一个MAC只对应一个User
-            conn = anJiaContext.Database.GetDbConnection();
-            conn.Open();
-            command = conn.CreateCommand();
-            query = "SELECT  Username"
-                + " FROM UserToSubserver "
-                + "WHERE SubserverID = '" + subServerId + "'";
-            command.CommandText = query;
-            DbDataReader BindedReader = await command.ExecuteReaderAsync();
-            if (BindedReader.HasRows)
-            {
-                //如果查询到被绑定
-                //我担心会查出一个MAC地址绑定了多个用户的情况
-                //后期可以设置让MAC地址为主键
-                BindedReader.Read();
-                buser1 = BindedReader["Username"].ToString();
+            //#region 查询子服务器MAC对应的用户名
+            ////查询MAC是否匹配有Username保证了一个MAC只对应一个User
+            //conn = anJiaContext.Database.GetDbConnection();
+            //conn.Open();
+            //command = conn.CreateCommand();
+            //query = "SELECT  Username"
+            //    + " FROM UserToSubserver "
+            //    + "WHERE SubserverID = '" + subServerId + "'";
+            //command.CommandText = query;
+            //DbDataReader BindedReader = await command.ExecuteReaderAsync();
+            //if (BindedReader.HasRows)
+            //{
+            //    //如果查询到被绑定
+            //    //我担心会查出一个MAC地址绑定了多个用户的情况
+            //    //后期可以设置让MAC地址为主键
+            //    BindedReader.Read();
+            //    buser1 = BindedReader["Username"].ToString();
 
-            }
-            conn.Close();
+            //}
+            //conn.Close();
 
-            #endregion
+            //#endregion
 
-            #region Token对应的用户名
+            //#region Token对应的用户名
 
-            //查询MAC是否匹配有Username保证了一个MAC只对应一个User
-            conn = anJiaContext.Database.GetDbConnection();
-            conn.Open();
-            command = conn.CreateCommand();
-            query = "SELECT  Username"
-                + " FROM Users "
-                + "WHERE AccessToken = '" + acToken + "'";
-            command.CommandText = query;
-            DbDataReader BUserReader = await command.ExecuteReaderAsync();
-            if (BUserReader.HasRows)
-            {
-                //如果查询到被绑定
-                //我担心会查出一个MAC地址绑定了多个用户的情况
-                //后期可以设置让MAC地址为主键
-               BUserReader.Read();
-                buser2 = BUserReader["Username"].ToString();
+            ////查询MAC是否匹配有Username保证了一个MAC只对应一个User
+            //conn = anJiaContext.Database.GetDbConnection();
+            //conn.Open();
+            //command = conn.CreateCommand();
+            //query = "SELECT  Username"
+            //    + " FROM Users "
+            //    + "WHERE AccessToken = '" + acToken + "'";
+            //command.CommandText = query;
+            //DbDataReader BUserReader = await command.ExecuteReaderAsync();
+            //if (BUserReader.HasRows)
+            //{
+            //    //如果查询到被绑定
+            //    //我担心会查出一个MAC地址绑定了多个用户的情况
+            //    //后期可以设置让MAC地址为主键
+            //   BUserReader.Read();
+            //    buser2 = BUserReader["Username"].ToString();
 
                 //如果子服务器对应的用户名和token对应的用户名相同
-                if (buser1 == buser2)
+                if (true)
                 {
 
                     bool sendSuccess=   await WebsocketClient.SendToSubserverAsync(subServerId, controlMsg);//发送给指定MAC信息
@@ -286,7 +286,7 @@ namespace AnJiaWebServer_V1.Controllers
                         //接下来对表进行更改
                     }
 
-                    conn.Close();//关闭连接
+                  //  conn.Close();//关闭连接
                     return result;
                 }
                 else
@@ -297,30 +297,19 @@ namespace AnJiaWebServer_V1.Controllers
 
                     serial = JsonConvert.SerializeObject(error);
                     result = (JObject)JsonConvert.DeserializeObject(serial);
-                    conn.Close();//关闭连接
+                  //  conn.Close();//关闭连接
                     return result;
                 }
 
-            }
-            conn.Close();
+       //     }
+           // conn.Close();
 
 
 
-            #endregion
+           // #endregion
 
             return result;
         }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

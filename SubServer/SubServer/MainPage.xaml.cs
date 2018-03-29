@@ -177,7 +177,7 @@ namespace FacialRecognizedDoorClient
                     // UpdateBoardInfo();
                     // UpdateNetworkInfo();
                     UpdateDateTime();
-                    // UpdateConnectedDevices();
+                  //   UpdateConnectedDevices();
 
                     timer.Start();
                 });
@@ -201,7 +201,7 @@ namespace FacialRecognizedDoorClient
 
             #region 初始化设备列表更新器
 
-            //UpdateClients = new DispatcherTimer();
+           // UpdateClients = new DispatcherTimer();
 
             //UpdateClients.Tick += null;
 
@@ -1079,7 +1079,7 @@ namespace FacialRecognizedDoorClient
 
         #endregion
 
-        #region 开锁相关方法
+       #region 开锁相关方法
 
         /// <summary>
         /// 点击界面上虚拟门铃触发
@@ -1107,7 +1107,7 @@ namespace FacialRecognizedDoorClient
             faceLookImagePanel.Visibility = Visibility.Collapsed;
             // 显示进度条
             AnalysingVisitorGrid.Visibility = Visibility.Visible;
-        //    await speechClient.DingDong();
+         await speechClient.DingDong();
             dispatcherTimer = new DispatcherTimer();//生成一个计时器
             
             JObject recognizedVisitors;//识别结果的Json对象
@@ -1293,12 +1293,20 @@ namespace FacialRecognizedDoorClient
         {
             // Greet visitor
             //   await speech.Read(SpeechContants.GeneralGreetigMessage(visitorName));
-
-            if (gpioAvailable)
+            try
             {
-                // Unlock door for specified ammount of time
-                gpioHelper.UnlockDoor();
+                if (gpioAvailable)
+                {
+                    // Unlock door for specified ammount of time
+                    gpioHelper.UnlockDoor();
+                }
             }
+            catch (Exception)
+            {
+
+                
+            }
+
         }
 
         /// <summary>
@@ -1379,7 +1387,7 @@ namespace FacialRecognizedDoorClient
             // If initialization was successfull, attach doorbell pressed event handler
             if (gpioAvailable)
             {
-           //     gpioHelper.GetDoorBellPin().ValueChanged += DoorBellPressed;//检测引脚变化启动人脸识别
+               gpioHelper.GetDoorBellPin().ValueChanged += DoorBellPressed;//检测引脚变化启动人脸识别
                 gpioHelper.GetBluetoothPairPin().ValueChanged+= BTPairPressedAsync;//检测引脚变化
             }
         }

@@ -24,7 +24,7 @@ namespace FacialRecognizedDoorClient.Helpers
                 return false;
             }
             #region 门铃按钮初始化
-            //doorbellPin = InitializeInputGPIO(doorbellPin,GpioConstants.DoorbellPinID);
+            doorbellPin = InitializeInputGPIO(doorbellPin,GpioConstants.DoorbellPinID);
             #endregion
 
             #region 蓝牙按钮引脚初始化
@@ -51,7 +51,7 @@ namespace FacialRecognizedDoorClient.Helpers
             #endregion
 
             #region 关锁引脚初始化
-     //       doorLockPin =  InitializeOutputGPIO(doorLockPin,GpioConstants.DoorLockPinID,GpioPinValue.High);
+           doorLockPin =  InitializeOutputGPIO(doorLockPin,GpioConstants.DoorLockPinID,GpioPinValue.High);
             #endregion
 
             #region 蓝牙标识灯引脚初始化

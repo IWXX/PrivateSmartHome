@@ -3,21 +3,30 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
     <UseEmulator>false</UseEmulator>
-    <RemoteDebugMachine>SubServer</RemoteDebugMachine>
+    <RemoteDebugMachine>192.168.43.193</RemoteDebugMachine>
     <AuthenticationMode>Universal</AuthenticationMode>
     <RemoteDebugEnabled>true</RemoteDebugEnabled>
     <CreateCleanLayout>true</CreateCleanLayout>
     <DeploymentType>CopyToDevice</DeploymentType>
-    <DoNotLaunchApp>true</DoNotLaunchApp>
+    <DoNotLaunchApp>false</DoNotLaunchApp>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <BackgroundTaskDebugEngines>
+    </BackgroundTaskDebugEngines>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <DebugEngines>
+    </DebugEngines>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <CreateCleanLayout>true</CreateCleanLayout>
+    <RemoteDebugMachine>192.168.137.223</RemoteDebugMachine>
+    <AuthenticationMode>Universal</AuthenticationMode>
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <UseEmulator>false</UseEmulator>
-    <RemoteDebugMachine>192.168.1.102</RemoteDebugMachine>
+    <RemoteDebugMachine>172.27.35.2</RemoteDebugMachine>
     <AuthenticationMode>Universal</AuthenticationMode>
     <RemoteDebugEnabled>true</RemoteDebugEnabled>
     <CreateCleanLayout>true</CreateCleanLayout>

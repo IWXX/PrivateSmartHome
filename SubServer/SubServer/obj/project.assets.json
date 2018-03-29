@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "UAP,Version=v10.0.10586": {
+    "UAP,Version=v10.0.15063": {
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2454,7 +2454,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10586/win10-arm": {
+    "UAP,Version=v10.0.15063/win10-arm": {
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4944,7 +4944,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10586/win10-arm-aot": {
+    "UAP,Version=v10.0.15063/win10-arm-aot": {
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -7470,7 +7470,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10586/win10-x64": {
+    "UAP,Version=v10.0.15063/win10-x64": {
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -9969,7 +9969,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10586/win10-x64-aot": {
+    "UAP,Version=v10.0.15063/win10-x64-aot": {
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -12504,7 +12504,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10586/win10-x86": {
+    "UAP,Version=v10.0.15063/win10-x86": {
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -15003,7 +15003,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.10586/win10-x86-aot": {
+    "UAP,Version=v10.0.15063/win10-x86-aot": {
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -27594,7 +27594,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "UAP,Version=v10.0.10586": [
+    "UAP,Version=v10.0.15063": [
       "Microsoft.NETCore.Platforms >= 2.0.1",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.5",
       "Newtonsoft.Json >= 10.0.3"
@@ -27602,7 +27602,8 @@
   },
   "packageFolders": {
     "C:\\Users\\10593\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -27615,7 +27616,8 @@
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\"
       ],
       "configFilePaths": [
         "C:\\Users\\10593\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27623,20 +27625,20 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
-        "uap10.0.10586"
+        "uap10.0.15063"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "uap10.0.10586": {
+        "uap10.0.15063": {
           "projectReferences": {}
         }
       }
     },
     "frameworks": {
-      "uap10.0.10586": {
+      "uap10.0.15063": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": {
             "target": "Package",

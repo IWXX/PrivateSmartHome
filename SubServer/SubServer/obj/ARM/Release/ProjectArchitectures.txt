@@ -1,0 +1,1 @@
+C:\Users\10593\Documents\GitHub\PrivateSmartHome\SubServer\SubServer\FacialRecognizedDoorClient.csproj;arm

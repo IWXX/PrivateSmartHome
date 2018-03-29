@@ -18,125 +18,117 @@ namespace FacialRecognizedDoorClient
         /// <summary>
         /// Connect()
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public void Connect(int connectionId, object target)
         {
             switch(connectionId)
             {
-            case 1:
+            case 1: // MainPage.xaml line 30
                 {
                     this.DoorbellButton = (global::Windows.UI.Xaml.Controls.Button)(target);
-                    #line 30 "..\..\..\MainPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.Button)this.DoorbellButton).Click += this.DoorbellButton_Click;
-                    #line default
                 }
                 break;
-            case 2:
+            case 2: // MainPage.xaml line 31
                 {
                     this.SpeechMediaElement = (global::Windows.UI.Xaml.Controls.MediaElement)(target);
-                    #line 31 "..\..\..\MainPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.MediaElement)this.SpeechMediaElement).Loaded += this.SpeechMediaElement_Loaded;
-                    #line default
                 }
                 break;
-            case 3:
+            case 3: // MainPage.xaml line 35
                 {
                     this.blutoothBox = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 4:
+            case 4: // MainPage.xaml line 37
                 {
                     this.TeamLogo = (global::Windows.UI.Xaml.Controls.Image)(target);
                 }
                 break;
-            case 5:
+            case 5: // MainPage.xaml line 38
                 {
                     this.ComeInBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 6:
+            case 6: // MainPage.xaml line 39
                 {
                     this.DetailsBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
-                    #line 39 "..\..\..\MainPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.TextBlock)this.DetailsBlock).Loaded += this.OnConnectAsync;
-                    #line default
                 }
                 break;
-            case 7:
+            case 7: // MainPage.xaml line 41
                 {
                     this.wifiicon = (global::Windows.UI.Xaml.Controls.AppBarButton)(target);
                 }
                 break;
-            case 8:
+            case 8: // MainPage.xaml line 43
                 {
                     this.Message_Copy2 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 9:
+            case 9: // MainPage.xaml line 45
                 {
                     this.AnalysingVisitorGrid = (global::Windows.UI.Xaml.Controls.StackPanel)(target);
                 }
                 break;
-            case 10:
+            case 10: // MainPage.xaml line 50
                 {
                     this.WebcamStatus = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 11:
+            case 11: // MainPage.xaml line 51
                 {
                     this.BlutoothStatus = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 12:
+            case 12: // MainPage.xaml line 53
                 {
                     this.wifiPasswodBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 13:
+            case 13: // MainPage.xaml line 54
                 {
                     this.LightHelperBox_Copy = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 14:
+            case 14: // MainPage.xaml line 55
                 {
                     this.wifiNameBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 15:
+            case 15: // MainPage.xaml line 56
                 {
                     this.LightHelperBox_Copy2 = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 16:
+            case 16: // MainPage.xaml line 57
                 {
                     this.WIFIstatusBlock = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
                 break;
-            case 17:
+            case 17: // MainPage.xaml line 59
                 {
                     this.Start = (global::Windows.UI.Xaml.Controls.RadioButton)(target);
                 }
                 break;
-            case 18:
+            case 18: // MainPage.xaml line 33
                 {
                     this.WebcamFeed = (global::Windows.UI.Xaml.Controls.CaptureElement)(target);
-                    #line 33 "..\..\..\MainPage.xaml"
                     ((global::Windows.UI.Xaml.Controls.CaptureElement)this.WebcamFeed).Loaded += this.WebcamFeed_Loaded;
-                    #line default
                 }
                 break;
-            case 19:
+            case 19: // MainPage.xaml line 26
                 {
                     this.faceLookImagePanel = (global::Windows.UI.Xaml.Controls.StackPanel)(target);
                 }
                 break;
-            case 20:
+            case 20: // MainPage.xaml line 27
                 {
                     this.faceLookImage = (global::Windows.UI.Xaml.Controls.Image)(target);
                 }
                 break;
-            case 21:
+            case 21: // MainPage.xaml line 22
                 {
                     this.CurrentTime = (global::Windows.UI.Xaml.Controls.TextBlock)(target);
                 }
@@ -147,7 +139,10 @@ namespace FacialRecognizedDoorClient
             this._contentLoaded = true;
         }
 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
+        /// <summary>
+        /// GetBindingConnector(int connectionId, object target)
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Windows.UI.Xaml.Markup.IComponentConnector GetBindingConnector(int connectionId, object target)
         {

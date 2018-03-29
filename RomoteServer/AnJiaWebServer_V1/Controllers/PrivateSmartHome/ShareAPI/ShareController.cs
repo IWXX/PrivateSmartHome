@@ -45,6 +45,8 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome.AccountAPI
                     //验证成功 
                     //进行数据库的操作 这个还没想好
 
+                    //RedisHelper.GetRedisHelper().ShareCheck
+
                     //返回结果
 
                     //手机APP收到结果应该主动访问分享的设备列表

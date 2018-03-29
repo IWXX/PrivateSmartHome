@@ -41,24 +41,38 @@ namespace AnJiaWebServer_V1.Controllers.PrivateSmartHome.AccountAPI
 
             #endregion
 
-            if (!Check())//检测注销状态
+            // if (Check())//检测注销状态
+            //{
+            //    //没有对应项则说明已经注销登录
+            //    result = null;
+            //    return result;
+            //}
+          
+            try
             {
-                //没有对应项则说明已经注销登录
-                result = null;
+                var shareCode = JwtManager.GetJwtManager().GenerateShareCode(username, deviceID);//生成分享码
+                SharecodeJson sharecode = new SharecodeJson()
+                {
+                    ReturnCode = "0000",
+                    QRShareCode = CreateQrcode(shareCode)
+                };
+                var code = JsonConvert.SerializeObject(sharecode);
+                result = (JObject)JsonConvert.DeserializeObject(code);
                 return result;
+            }
+            catch (Exception e)
+            {
+                SharecodeJson sharecode = new SharecodeJson()
+                {
+                    ReturnCode = "0000",
+                    QRShareCode = e.Message
+                };
+                var code = JsonConvert.SerializeObject(sharecode);
+                result = (JObject)JsonConvert.DeserializeObject(code);
+            return result;
             }
 
 
-
-            var shareCode = JwtManager.GetJwtManager().GenerateShareCode(username,deviceID);//生成分享码
-            SharecodeJson sharecode = new SharecodeJson()
-            {
-                ReturnCode="0000",
-                QRShareCode = CreateQrcode(shareCode)
-            };
-            var code= JsonConvert.SerializeObject(sharecode);
-              result = (JObject)JsonConvert.DeserializeObject(code);
-            return result;
         }
         private string CreateQrcode(string shareCode)//创建Base64格式的二维码
         {
